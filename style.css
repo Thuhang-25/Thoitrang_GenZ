@@ -1,0 +1,259 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+/* 1. HEADER */
+.header-jm {
+  width: 100%;
+  border-bottom: 1px solid #eeeeee;
+  background-color: #ffffff;
+  padding: 12px 30px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logo-box {
+  text-align: center;
+  line-height: 1.1;
+}
+
+.logo-title {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.logo-sub {
+  font-size: 7.5px;
+  letter-spacing: 1.5px;
+  display: block;
+  color: #333;
+}
+
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 22px;
+  align-items: center;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #111111;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s ease;
+}
+
+.nav-menu a:hover {
+  color: #b8860b;
+}
+
+.badge-sale {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #d9534f;
+  font-size: 8px;
+  font-weight: bold;
+}
+
+.header-right {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.header-right a {
+  color: #222222;
+  text-decoration: none;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.header-right span {
+  font-size: 12px;
+}
+
+/* 2. SUB BAR */
+.sub-bar {
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ebebeb;
+  padding: 8px 0;
+}
+
+.sub-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  font-size: 12px;
+  color: #666666;
+}
+
+.sub-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sub-item i {
+  color: #888888;
+}
+
+/* 3. HERO BANNER & SEARCH */
+.hero-section {
+  position: relative;
+  width: 100%;
+  background-color: #f2e7e3;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Floating Search Box */
+.search-box-container {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  width: 48%;
+  max-width: 600px;
+  background: #ffffff;
+  border-radius: 2px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.search-box-container input {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  color: #555;
+}
+
+.search-box-container button {
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
+  padding: 0 22px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.search-box-container button:hover {
+  background-color: #000000;
+}
+
+/* Floating Chat Icon (Nút Tròn Xanh Góc Phải) */
+.floating-chat-btn {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  width: 42px;
+  height: 42px;
+  background-color: #38aaf8;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 18px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* SECTION DANH MỤC HÌNH TRÒN */
+.category-menu-section {
+  padding: 40px 20px;
+  background-color: #ffffff;
+}
+
+.category-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.circle-item {
+  text-decoration: none;
+  color: #333333;
+  transition: transform 0.2s ease;
+}
+
+.circle-item:hover {
+  transform: translateY(-4px);
+}
+
+/* Vòng tròn viền chấm bên ngoài */
+.circle-border {
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  border: 1px dashed #cccccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+}
+
+/* Vòng tròn nền xám nhạt bên trong */
+.circle-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px;
+}
+
+.circle-inner i {
+  font-size: 20px;
+  color: #555555;
+}
+
+.circle-inner span {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #222222;
+}
