@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thời Trang GenZ - JM Dress Design</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Thêm FontAwesome cho biểu tượng -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -15,11 +14,10 @@
     <div class="header-container">
       
       <!-- LOGO -->
-      <div class="logo-box">
-        <h1 class="logo-title">J D D</h1>
-        <span class="logo-sub">JM DRESS DESIGN</span>
-      </div>
-
+<div class="logo-box">
+  <h1 class="logo-title">GenZ</h1>
+  <span class="logo-sub">Thoitrang GenZ</span>
+</div>
       <!-- NAVIGATION MENU -->
       <nav class="nav-menu">
         <ul>
@@ -43,7 +41,7 @@
       <div class="header-right">
         <a href="#"><i class="fa-regular fa-heart"></i> <span>0</span></a>
         <a href="#"><i class="fa-solid fa-bag-shopping"></i> <span>0</span></a>
-        <a href="#"><i class="fa-regular fa-user"></i></a>
+        <a href="taikhoan.html" title="Tài khoản"><i class="fa-regular fa-user"></i></a>
       </div>
 
     </div>
@@ -60,19 +58,16 @@
 
   <!-- 3. HERO BANNER SECTION -->
   <section class="hero-section">
-    <!-- Bạn thay ảnh banner hero của bạn vào đường dẫn src bên dưới -->
     <img src="hinhanh/anh trang chu.jpg" alt="Giấc mơ dịu dàng" class="hero-img">
 
-    <!-- Thanh tìm kiếm đè lên Banner -->
     <div class="search-box-container">
       <input type="text" placeholder="Bạn muốn tìm sản phẩm gì ?">
       <button type="submit">Tìm kiếm ngay</button>
     </div>
 
-    <!-- Nút Chat hỗ trợ hình tròn màu xanh -->
-    <a href="#" class="floating-chat-btn">
-      <i class="fa-solid fa-user-astronaut"></i>
-    </a>
+<a href="taikhoan.html" class="floating-chat-btn" title="Đăng nhập / Tài khoản">
+  <i class="fa-solid fa-user-astronaut"></i>
+</a>
   </section>
 
   <!-- DANH MỤC SẢN PHẨM HÌNH TRÒN -->
@@ -153,6 +148,84 @@
 
     </div>
   </section>
-  
+
+  <!-- FOOTER SECTION -->
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <!-- Cột 1 -->
+      <div class="footer-col">
+        <h4>THỜI TRANG GENZ</h4>
+        <ul>
+          <li><a href="#">Giới thiệu</a></li>
+          <li><a href="#">Tin tức</a></li>
+          <li><a href="#">Hệ thống cửa hàng</a></li>
+          <li><a href="#">Thông tin tuyển dụng</a></li>
+          <li><a href="#">Liên hệ hợp tác kinh doanh</a></li>
+        </ul>
+      </div>
+
+      <!-- Cột 2 -->
+      <div class="footer-col">
+        <h4>LIÊN KẾT VỚI CHÚNG TÔI</h4>
+        <ul class="social-links">
+          <li><a href="#"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+          <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+          <li><a href="#"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
+          <li><a href="#"><i class="fa-solid fa-envelope"></i> Email: ThoitrangGenZ@gmail.com.vn</a></li>
+        </ul>
+      </div>
+
+      <!-- Cột 3 -->
+      <div class="footer-col">
+        <h4>CHĂM SÓC KHÁCH HÀNG</h4>
+        <ul>
+          <li><a href="#">Chính sách vận chuyển</a></li>
+          <li><a href="#">Chính sách tích điểm</a></li>
+          <li><a href="#">Chính sách bảo mật</a></li>
+          <li><a href="#">Chế độ bảo hành trọn đời</a></li>
+        </ul>
+      </div>
+
+      <!-- Cột 4: Form Đăng ký -->
+      <div class="footer-col newsletter-col">
+        <h4>ĐĂNG KÝ MAIL NHẬN ƯU ĐÃI TỪ Thoitrang GenZ</h4>
+        <form id="subscribeForm" onsubmit="handleSubscribe(event)">
+          <div class="input-group">
+            <input type="email" id="emailInput" placeholder="Nhập email của bạn" required>
+            <button type="submit">GỬI NGAY</button>
+          </div>
+        </form>
+        <p class="terms-text">
+          Bằng cách nhấp vào nút <a href="#">ĐĂNG KÝ</a>, bạn đồng ý với Chính sách bảo mật và cookie của chúng tôi. Vui lòng <a href="taikhoan.html">ĐĂNG NHẬP</a> khi bạn đã có tài khoản.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="bottom-container">
+        <p>©2009-2026 Thoitrang GenZ All Rights Reserved</p>
+        <div class="payment-info">
+          <span>Chúng tôi nhận thanh toán qua:</span>
+          <img src="hinhanh/logo vnpay.png" alt="VNPAY" class="payment-logo">
+        </div>
+      </div>
+      <div class="company-info">
+        <p><strong>CÔNG TY CỔ PHẦN THƯƠNG MẠI VIỆT NAM</strong></p>
+        <p>Trụ sở chính: Đại học Phenikaa</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT BẬT THÔNG BÁO -->
+  <script>
+    function handleSubscribe(event) {
+      event.preventDefault();
+      alert("Đăng ký thành công");
+      document.getElementById("emailInput").value = "";
+    }
+  </script>
+
 </body>
 </html>
