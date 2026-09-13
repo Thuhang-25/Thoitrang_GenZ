@@ -1,0 +1,457 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thời Trang GenZ - Đầm</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .view-section {
+      display: none;
+    }
+    .view-section.active {
+      display: block;
+    }
+  </style>
+
+<style>
+  .selected-color {
+    display: inline-block;
+    min-width: 45px;
+    font-weight: 500;
+  }
+
+  .btn-like i.liked {
+    color: red !important;
+    font-weight: 900;
+  }
+</style>
+
+</head>
+<body>
+
+  <header class="header-jm">
+    <div class="header-container">
+      <a href="index.html" class="logo-box">
+        <h1 class="logo-title">GenZ</h1>
+        <span class="logo-sub">Thoitrang GenZ</span>
+      </a>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html" class="sale-link"><span class="badge-sale">SALE</span> KHỞI NGUỒN TINH KHÔI <i class="fa-solid fa-angle-down"></i></a></li>
+          <li><a href="dam.html" style="color: #b8860b;" onclick="showList(event)">ĐẦM</a></li>
+          <li><a href="ao.html">ÁO</a></li>
+          <li><a href="quan.html">QUẦN</a></li>
+          <li><a href="chanvay.html">CHÂN VÁY</a></li>
+          <li><a href="aokhoac.html">ÁO KHOÁC</a></li>
+          <li><a href="lookbook.html">LOOKBOOK</a></li>
+          <li><a href="bst.html">BST MỚI</a></li>
+        </ul>
+      </nav>
+      <div class="header-right">
+        <a href="#"><i class="fa-regular fa-heart"></i> <span>0</span></a>
+        <a href="#" onclick="openCart(event)"><i class="fa-solid fa-bag-shopping"></i> <span id="cart-count">0</span></a>
+        <a href="taikhoan.html"><i class="fa-regular fa-user"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <div id="section-list" class="view-section active">
+    <div class="breadcrumb-banner">
+      <a href="index.html">Trang chủ</a> &gt; <span>Áo khoác</span>
+    </div>
+
+    <div class="product-page-container">
+      <div class="product-filter-bar">
+        <div class="filter-left">
+          <span>Xem theo</span>
+          <select id="sortProducts">
+            <option value="newest">Mới nhất</option>
+            <option value="price-asc">Giá thấp đến cao</option>
+            <option value="price-desc">Giá cao đến thấp</option>
+          </select>
+        </div>
+        <div class="filter-right">
+          Hiển thị <strong>1 - 7</strong> / <strong>335</strong> sản phẩm
+        </div>
+      </div>
+
+      <div class="product-grid" id="product-grid">
+        <div class="product-card" data-price="799000" onclick="showDetail('Áo Khoác Gió Nữ Premium', '799,000đ', 'IF09.2900', 'anhAokhoac/aokhoac1.jpg', '★★★★★ (235)', '129 nhận xét', '375 đã bán', 'Be')">
+          <div class="product-img-box">
+            <img src="anhAokhoac/aokhoac1.jpg" alt="Áo Khoác Gió Nữ Premium">
+          </div>
+          <div class="product-info">
+            <h3><a href="javascript:void(0)">Áo Khoác Gió Nữ Premium</a></h3>
+            <div class="price-row"><span class="price">799,000đ</span><i class="fa-regular fa-heart like-icon"></i></div>
+            <div class="meta-row"><span class="rating">★★★★★ (235)</span><span class="sold">(375 đã bán)</span></div>
+          </div>
+        </div>
+
+        <div class="product-card" data-price="759000" onclick="showDetail('Áo Phao Nữ Cao Cấp Châu Âu', '759,000đ', 'IF09.2901', 'anhAokhoac/aokhoac2.jpg', '★★★★☆ (122)', '58 nhận xét', '301 đã bán', 'Nâu')">
+          <div class="product-img-box">
+            <img src="anhAokhoac/aokhoac2.jpg" alt="Áo Phao Nữ Cao Cấp Châu Âu">
+          </div>
+          <div class="product-info">
+            <h3><a href="javascript:void(0)">Áo Phao Nữ Cao Cấp Châu Âu</a></h3>
+            <div class="price-row"><span class="price">759,000đ</span><i class="fa-regular fa-heart like-icon"></i></div>
+            <div class="meta-row"><span class="rating">★★★★☆ (122)</span><span class="sold">(301 đã bán)</span></div>
+          </div>
+        </div>
+
+        <div class="product-card" data-price="450000" onclick="showDetail('Áo Khoác Dạ Nữ Luxury', '450,000đ', 'IF09.2902', 'anhAokhoac/aokhoac3.jpg', '★★★★★ (217)', '57 nhận xét', '320 đã bán', 'Đen')">
+          <div class="product-img-box">
+            <img src="anhAokhoac/aokhoac3.jpg" alt="Áo Khoác Dạ Nữ Luxury">
+          </div>
+          <div class="product-info">
+            <h3><a href="javascript:void(0)">Áo Khoác Dạ Nữ Luxury</a></h3>
+            <div class="price-row"><span class="price">450,000đ</span><i class="fa-regular fa-heart like-icon"></i></div>
+            <div class="meta-row"><span class="rating">★★★★★ (217)</span><span class="sold">(320 đã bán)</span></div>
+          </div>
+        </div>
+
+        <div class="product-card" data-price="520000" onclick="showDetail('Áo Dạ Nữ Nhẹ Nhàng Thanh Lịch', '520,000đ', 'IF09.2903', 'anhAokhoac/aokhoac4.jpg', '★★★★★ (137)', '87 nhận xét', '245 đã bán', 'Be')">
+          <div class="product-img-box">
+            <img src="anhAokhoac/aokhoac4.jpg" alt="Áo Dạ Nữ Nhẹ Nhàng Thanh Lịch">
+          </div>
+          <div class="product-info">
+            <h3><a href="javascript:void(0)">Áo Dạ Nữ Nhẹ Nhàng Thanh Lịch</a></h3>
+            <div class="price-row"><span class="price">520,000đ</span><i class="fa-regular fa-heart like-icon"></i></div>
+            <div class="meta-row"><span class="rating">★★★★★ (137)</span><span class="sold">(245 đã bán)</span></div>
+          </div>
+        </div>
+
+        <div class="product-card" data-price="1255000" onclick="showDetail('Áo Lông Vũ Nữ Ultra Light', '1,255,000đ', 'IF09.2904', 'anhAokhoac/aokhoac5.jpg', '★★★★☆ (156)', '127 nhận xét', '318 đã bán', 'Be')">
+          <div class="product-img-box">
+            <img src="anhAokhoac/aokhoac5.jpg" alt="Áo Lông Vũ Nữ Ultra Light">
+          </div>
+          <div class="product-info">
+            <h3><a href="javascript:void(0)">Áo Lông Vũ Nữ Ultra Light</a></h3>
+            <div class="price-row"><span class="price">1,255,000đ</span><i class="fa-regular fa-heart like-icon"></i></div>
+            <div class="meta-row"><span class="rating">★★★★☆ (156)</span><span class="sold">(318 đã bán)</span></div>
+          </div>
+        </div>
+
+        <div class="product-card" data-price="470000" onclick="showDetail('Áo Khoác Dạ Nữ Classic', '470,000đ', 'IF09.2905', 'anhAokhoac/aokhoac6.jpg', '★★★★☆ (564)', '364 nhận xét', '1.2k đã bán', 'Xám')">
+          <div class="product-img-box">
+            <img src="anhAokhoac/aokhoac6.jpg" alt="Áo Khoác Dạ Nữ Classic">
+          </div>
+          <div class="product-info">
+            <h3><a href="javascript:void(0)">Áo Khoác Dạ Nữ Classic</a></h3>
+            <div class="price-row"><span class="price">470,000đ</span><i class="fa-regular fa-heart like-icon"></i></div>
+            <div class="meta-row"><span class="rating">★★★★☆ (564)</span><span class="sold">(1.2k đã bán)</span></div>
+          </div>
+        </div>
+
+        <div class="product-card" data-price="1355000" onclick="showDetail('Áo Phao Boxy Nữ Minimal', '1,355,000đ', 'IF09.2906', 'anhAokhoac/aokhoac7.jpg', '★★★★★ (246)', '178 nhận xét', '355 đã bán', 'Đen')">
+          <div class="product-img-box">
+            <img src="anhAokhoac/aokhoac7.jpg" alt="Áo Phao Boxy Nữ Minimal">
+          </div>
+          <div class="product-info">
+            <h3><a href="javascript:void(0)">Áo Phao Boxy Nữ Minimal</a></h3>
+            <div class="price-row"><span class="price">1,355,000đ</span><i class="fa-regular fa-heart like-icon"></i></div>
+            <div class="meta-row"><span class="rating">★★★★★ (246)</span><span class="sold">(355 đã bán)</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="section-detail" class="view-section">
+    <div class="detail-search-bar">
+      <div class="search-box-container detail-search">
+        <input type="text" placeholder="Bạn muốn tìm sản phẩm gì ?">
+        <button type="submit">Tìm kiếm ngay</button>
+      </div>
+    </div>
+
+    <div class="breadcrumb-banner">
+      <a href="index.html">Trang chủ</a> &gt; <a href="#" onclick="showList(event)">Áo khoác</a> &gt; <span id="detail-bc-title">Tên sản phẩm</span>
+    </div>
+
+    <div class="detail-container">
+      <div class="detail-thumbnails">
+        <img id="thumb1" src="anhAokhoac/aokhoac1.jpg" class="active" alt="thumb1">
+        <img id="thumb2" src="anhAokhoac/aokhoac1.jpg" alt="thumb2">
+        <img id="thumb3" src="anhAokhoac/aokhoac1.jpg" alt="thumb3">
+        <img id="thumb4" src="anhAokhoac/aokhoac1.jpg" alt="thumb4">
+      </div>
+
+      <div class="detail-main-img">
+        <img id="detail-product-img" src="anhAokhoac/aokhoac1.jpg" alt="Ảnh chính">
+      </div>
+
+      <div class="detail-info">
+        <h1 class="detail-title" id="detail-product-title">Tên sản phẩm</h1>
+        <div class="detail-meta">
+          <span id="detail-product-sku">SKU: IF09.2906</span>
+          <span class="detail-stars" id="detail-product-stars">★★★★★ (0)</span>
+          <span id="detail-product-reviews">0 Nhận xét</span>
+        </div>
+
+        <div class="detail-price" id="detail-product-price">0đ</div>
+
+        <div class="promo-banner-box">
+          <p>Trả sau đến 12 tháng với <strong>Fundiin</strong> <i class="fa-solid fa-circle-question"></i></p>
+          <div class="promo-tag">
+            <span class="percent">%</span>
+            <span>Giảm đến <strong>50K</strong> khi thanh toán qua Fundiin. <u>xem thêm</u></span>
+          </div>
+        </div>
+
+        <div class="option-row">
+          <label>Màu sắc:</label>
+          <div class="color-options"><span id="detail-product-color" class="selected-color">Be</span></div>
+        </div>
+
+        <div class="option-row">
+          <label>Size:</label>
+          <div class="size-options">
+            <button>S</button>
+            <button class="active">M</button>
+            <button>L</button>
+            <button>XL</button>
+          </div>
+        </div>
+
+        <div class="option-row">
+          <label>Số lượng:</label>
+          <div class="quantity-box">
+            <button>-</button>
+            <input type="text" value="1">
+            <button>+</button>
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <button class="btn-like"><i class="fa-regular fa-heart"></i></button>
+          <button class="btn-add-cart">THÊM VÀO GIỎ HÀNG</button>
+          <button class="btn-buy-now">MUA NGAY</button>
+        </div>
+<div class="review-summary">
+          <h3>Đánh giá sản phẩm</h3>
+          <p id="detail-review-count">0 đánh giá</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="taikhoan.html" class="floating-chat-btn" title="Đăng nhập / Tài khoản">
+    <i class="fa-solid fa-user-astronaut"></i>
+  </a>
+
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <div class="company-info"><p>©2009-2026 Thoitrang GenZ All Rights Reserved</p></div>
+    </div>
+  </footer>
+  <script>
+    let selectedSize = 'M';
+    let selectedColor = 'Be';
+    let currentProduct = null;
+
+    function showDetail(title, price, sku, imgSrc, stars, reviews, sold, color) {
+      document.getElementById('section-list').classList.remove('active');
+      document.getElementById('section-detail').classList.add('active');
+
+      currentProduct = { title, price, sku, imgSrc, color };
+      selectedColor = color;
+      selectedSize = 'M';
+
+      document.getElementById('detail-product-title').textContent = title;
+      document.getElementById('detail-product-price').textContent = price;
+      document.getElementById('detail-product-sku').textContent = 'SKU: ' + sku;
+      document.getElementById('detail-product-stars').textContent = stars;
+      document.getElementById('detail-product-reviews').textContent = reviews;
+      document.getElementById('detail-review-count').textContent = reviews + ' / ' + sold;
+      document.getElementById('detail-bc-title').textContent = title;
+
+      ['detail-product-img','thumb1','thumb2','thumb3','thumb4'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.src = imgSrc;
+      });
+
+      document.getElementById('detail-product-color').textContent = selectedColor;
+
+      document.querySelectorAll('.size-options button').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.trim() === 'M');
+      });
+
+      document.querySelector('.quantity-box input').value = 1;
+
+      const detailHeart = document.querySelector('.btn-like i');
+      detailHeart.classList.remove('fa-solid', 'liked');
+      detailHeart.classList.add('fa-regular');
+      detailHeart.style.color = '';
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showList(event) {
+      if (event) event.preventDefault();
+      document.getElementById('section-detail').classList.remove('active');
+      document.getElementById('section-list').classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showNotification(message) {
+      const old = document.querySelector('.custom-notification');
+      if (old) old.remove();
+
+      const notification = document.createElement('div');
+      notification.className = 'custom-notification';
+      notification.textContent = message;
+
+      Object.assign(notification.style, {
+        position: 'fixed',
+        top: '25px',
+        left: '50%',
+        transform: 'translateX(-50%)',
+        background: '#222',
+        color: '#fff',
+        padding: '14px 24px',
+        borderRadius: '6px',
+        zIndex: '99999',
+        fontSize: '15px',
+        boxShadow: '0 4px 15px rgba(0,0,0,.25)'
+      });
+
+      document.body.appendChild(notification);
+
+      setTimeout(() => {
+        notification.style.opacity = '0';
+        notification.style.transition = 'opacity .3s ease';
+        setTimeout(() => notification.remove(), 300);
+      }, 1800);
+    }
+
+    // Chọn size S, M, L, XL.
+    document.querySelectorAll('.size-options button').forEach(button => {
+      button.addEventListener('click', function(event) {
+        event.stopPropagation();
+        document.querySelectorAll('.size-options button').forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+        selectedSize = this.textContent.trim();
+      });
+    });
+
+    // Số lượng.
+    const quantityInput = document.querySelector('.quantity-box input');
+    const quantityButtons = document.querySelectorAll('.quantity-box button');
+
+    quantityButtons[0].addEventListener('click', function(event) {
+      event.stopPropagation();
+      quantityInput.value = Math.max(1, (parseInt(quantityInput.value) || 1) - 1);
+    });
+
+    quantityButtons[1].addEventListener('click', function(event) {
+      event.stopPropagation();
+      quantityInput.value = (parseInt(quantityInput.value) || 1) + 1;
+    });
+
+    // Tim ở trang chi tiết: chuyển đỏ khi nhấn.
+    document.querySelector('.btn-like').addEventListener('click', function(event) {
+      event.stopPropagation();
+      const icon = this.querySelector('i');
+
+      if (icon.classList.contains('liked')) {
+        icon.classList.remove('liked', 'fa-solid');
+        icon.classList.add('fa-regular');
+        icon.style.color = '';
+      } else {
+        icon.classList.remove('fa-regular');
+        icon.classList.add('fa-solid', 'liked');
+        icon.style.color = 'red';
+      }
+    });
+
+    // Tim ở từng sản phẩm trong danh sách.
+    document.querySelectorAll('.like-icon').forEach(icon => {
+      icon.addEventListener('click', function(event) {
+        event.stopPropagation();
+
+        if (this.classList.contains('liked')) {
+          this.classList.remove('liked', 'fa-solid');
+          this.classList.add('fa-regular');
+          this.style.color = '';
+        } else {
+          this.classList.remove('fa-regular');
+          this.classList.add('fa-solid', 'liked');
+          this.style.color = 'red';
+        }
+      });
+    });
+
+    // Thêm vào giỏ.
+    document.querySelector('.btn-add-cart').addEventListener('click', function(event) {
+      event.stopPropagation();
+      if (!currentProduct) return;
+
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push({
+        ...currentProduct,
+        size: selectedSize,
+        color: selectedColor,
+        quantity: parseInt(quantityInput.value) || 1
+      });
+
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCount();
+      showNotification('Đã thêm vào giỏ');
+    });
+
+    // Mua ngay.
+    document.querySelector('.btn-buy-now').addEventListener('click', function(event) {
+      event.stopPropagation();
+      if (!currentProduct) return;
+      showNotification('Đã mua sản phẩm');
+    });
+
+    // Cập nhật số lượng giỏ hàng.
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const total = cart.reduce((sum, item) => sum + (parseInt(item.quantity) || 1), 0);
+      const count = document.getElementById('cart-count');
+      if (count) count.textContent = total;
+    }
+
+    // Thumbnail.
+    document.querySelectorAll('.detail-thumbnails img').forEach(thumb => {
+      thumb.addEventListener('click', function(event) {
+        event.stopPropagation();
+        document.querySelectorAll('.detail-thumbnails img').forEach(img => img.classList.remove('active'));
+        this.classList.add('active');
+        document.getElementById('detail-product-img').src = this.src;
+      });
+    });
+
+    // Sắp xếp sản phẩm theo giá.
+    function sortProducts(order) {
+      const grid = document.getElementById('product-grid');
+      const products = Array.from(grid.children);
+
+      if (order === 'price-asc') {
+        products.sort((a, b) => Number(a.dataset.price) - Number(b.dataset.price));
+      } else if (order === 'price-desc') {
+        products.sort((a, b) => Number(b.dataset.price) - Number(a.dataset.price));
+      } else {
+        products.sort((a, b) => Number(a.dataset.originalOrder) - Number(b.dataset.originalOrder));
+      }
+
+      products.forEach(product => grid.appendChild(product));
+    }
+
+    document.querySelectorAll('#product-grid .product-card').forEach((product, index) => {
+      product.dataset.originalOrder = index;
+    });
+
+    document.getElementById('sortProducts').addEventListener('change', function() {
+      sortProducts(this.value);
+    });
+
+    updateCartCount();
+  </script>
+</body>
+</html>
