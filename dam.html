@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* Trạng thái ẩn/hiện section */
+
     .view-section {
       display: none;
     }
@@ -18,7 +18,6 @@
 </head>
 <body>
 
-  <!-- HEADER -->
   <header class="header-jm">
     <div class="header-container">
       <a href="index.html" class="logo-box">
@@ -33,8 +32,8 @@
           <li><a href="quan.html">QUẦN</a></li>
           <li><a href="chanvay.html">CHÂN VÁY</a></li>
           <li><a href="aokhoac.html">ÁO KHOÁC</a></li>
-          <li><a href="lookbook.html">LOOKBOOK</a></li>
-          <li><a href="bst.html">BST MỚI</a></li>
+          <li><a href="lookbook.html">THẮT LƯNG</a></li>
+          <li><a href="bst.html">BST MÙA ĐÔNG</a></li>
         </ul>
       </nav>
       <div class="header-right">
@@ -45,7 +44,6 @@
     </div>
   </header>
 
-  <!-- ================= SECTION 1: DANH SÁCH SẢN PHẨM ================= -->
   <div id="section-list" class="view-section active">
     <!-- Breadcrumb danh sách -->
     <div class="breadcrumb-banner">
@@ -67,10 +65,8 @@
         </div>
       </div>
 
-      <!-- Khung chứa 7 sản phẩm chuẩn với giá/đánh giá/lượt bán độc bản -->
       <div class="product-grid">
         
-        <!-- Đầm 1 -->
         <div class="product-card" onclick="showDetail('Đầm voan tơ hồng cổ V xẻ sâu dáng xòe', '785,000đ', 'IF09.2808', 'hinhanh/dam1.jpg', '★★★★★ (18)', '(18 nhận xét)', '(287 đã bán)')">
           <div class="product-img-box">
             <img src="hinhanh/dam1.jpg" alt="Đầm 1">
@@ -82,7 +78,6 @@
           </div>
         </div>
 
-        <!-- Đầm 2 -->
         <div class="product-card" onclick="showDetail('Đầm cúp ngực hồng phối viền lông vũ', '895,000đ', 'IF09.2809', 'hinhanh/dam2.jpg', '★★★★☆ (42)', '(42 nhận xét)', '(301 đã bán)')">
           <div class="product-img-box">
             <img src="hinhanh/dam2.jpg" alt="Đầm 2">
@@ -94,7 +89,6 @@
           </div>
         </div>
 
-        <!-- Đầm 3 -->
         <div class="product-card" onclick="showDetail('Đầm 2 dây cổ đổ phối ren tà xòe nhẹ', '650,000đ', 'IF09.2810', 'hinhanh/dam3.jpg', '★★★★★ (95)', '(95 nhận xét)', '(520 đã bán)')">
           <div class="product-img-box">
             <img src="hinhanh/dam3.jpg" alt="Đầm 3">
@@ -106,7 +100,6 @@
           </div>
         </div>
 
-        <!-- Đầm 4 -->
         <div class="product-card" onclick="showDetail('Đầm hồng xòe công chúa đính nơ vai', '920,000đ', 'IF09.2811', 'hinhanh/dam4.jpg', '★★★☆☆ (7)', '(7 nhận xét)', '(145 đã bán)')">
           <div class="product-img-box">
             <img src="hinhanh/dam4.jpg" alt="Đầm 4">
@@ -118,7 +111,6 @@
           </div>
         </div>
 
-        <!-- Đầm 5 -->
         <div class="product-card" onclick="showDetail('Đầm cổ yếm hồng đính đá chân váy xếp ly', '1,150,000đ', 'IF09.2812', 'hinhanh/dam5.jpg', '★★★★★ (156)', '(156 nhận xét)', '(1.2k đã bán)')">
           <div class="product-img-box">
             <img src="hinhanh/dam5.jpg" alt="Đầm 5">
@@ -130,7 +122,6 @@
           </div>
         </div>
 
-        <!-- Đầm 6 -->
         <div class="product-card" onclick="showDetail('Đầm 2 dây lụa bóng đính nơ ngực cao cấp', '820,000đ', 'IF09.2813', 'hinhanh/dam6.jpg', '★★★★☆ (64)', '(64 nhận xét)', '(412 đã bán)')">
           <div class="product-img-box">
             <img src="hinhanh/dam6.jpg" alt="Đầm 6">
@@ -142,7 +133,6 @@
           </div>
         </div>
 
-        <!-- Đầm 7 -->
         <div class="product-card" onclick="showDetail('Đầm cúp ngực ren tầng xòe công chúa', '1,305,000đ', 'IF09.2814', 'hinhanh/dam7.jpg', '★★★★★ (210)', '(210 nhận xét)', '(1,986 đã bán)')">
           <div class="product-img-box">
             <img src="hinhanh/dam7.jpg" alt="Đầm 7">
@@ -154,11 +144,10 @@
           </div>
         </div>
 
-      </div> <!-- Kết thúc product-grid -->
+      </div> 
     </div>
   </div>
 
-  <!-- ================= SECTION 2: CHI TIẾT SẢN PHẨM ================= -->
   <div id="section-detail" class="view-section">
     <div class="detail-search-bar">
       <div class="search-box-container detail-search">
@@ -167,7 +156,6 @@
       </div>
     </div>
 
-    <!-- Breadcrumb chi tiết có nút quay lại -->
     <div class="breadcrumb-banner">
       <a href="index.html">Trang chủ</a> &gt; <a href="#" onclick="showList(event)">Đầm</a> &gt; <span id="detail-bc-title">Tên sản phẩm</span>
     </div>
@@ -247,36 +235,30 @@
     </div>
   </div>
 
-  <!-- Nút Chat tròn xanh góc phải -->
   <a href="taikhoan.html" class="floating-chat-btn" title="Đăng nhập / Tài khoản">
     <i class="fa-solid fa-user-astronaut"></i>
   </a>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-bottom">
       <div class="company-info"><p>©2009-2026 Thoitrang GenZ All Rights Reserved</p></div>
     </div>
   </footer>
 
-  <!-- JAVASCRIPT XỬ LÝ CHUYỂN TRANG VÀ CẬP NHẬT DỮ LIỆU ĐỒNG BỘ -->
   <script>
     function showDetail(title, price, sku, imgSrc, stars, reviews, sold) {
       document.getElementById('section-list').classList.remove('active');
       document.getElementById('section-detail').classList.add('active');
       
-      // Cập nhật thông tin chi tiết
       document.getElementById('detail-product-title').innerText = title;
       document.getElementById('detail-product-price').innerText = price;
       document.getElementById('detail-product-sku').innerText = 'SKU: ' + sku;
       document.getElementById('detail-bc-title').innerText = title;
       
-      // Cập nhật số sao và nhận xét
       document.getElementById('detail-product-stars').innerText = stars;
       document.getElementById('detail-product-reviews').innerText = reviews;
       document.getElementById('detail-review-count').innerText = reviews + ' / ' + sold;
       
-      // Cập nhật đường dẫn hình ảnh
       document.getElementById('detail-product-img').src = imgSrc;
       document.getElementById('thumb1').src = imgSrc;
       document.getElementById('thumb2').src = imgSrc;
