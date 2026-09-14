@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LEATHERX - Thắt Lưng Da</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+
+    <div class="logo">
+        LEATHER<span>X</span>
+    </div>
+
+    <nav>
+        <a href="#home">Trang chủ</a>
+        <a href="#products">Sản phẩm</a>
+        <a href="#about">Về chúng tôi</a>
+        <a href="#contact">Liên hệ</a>
+    </nav>
+
+    <div class="header-right">
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Tìm thắt lưng..."
+            >
+            <button onclick="searchProducts()">⌕</button>
+        </div>
+
+        <button class="cart-button" onclick="openCart()">
+            🛒
+            <span id="cartCount">0</span>
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <p class="small-title">LEATHERX COLLECTION</p>
+
+        <h1>
+            THẮT LƯNG DA
+            <br>
+            <span>ĐỊNH HÌNH PHONG CÁCH</span>
+        </h1>
+
+        <p class="hero-text">
+            Những mẫu thắt lưng da thời trang dành cho nam và nữ.
+            Thiết kế tối giản, hiện đại và dễ phối với mọi outfit.
+        </p>
+
+        <a href="#products" class="hero-button">
+            KHÁM PHÁ SẢN PHẨM
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+<section class="products-section" id="products">
+
+    <div class="section-title">
+
+        <p>SẢN PHẨM NỔI BẬT</p>
+
+        <h2>
+            5 MẪU THẮT LƯNG DA
+        </h2>
+
+        <span>
+            Thiết kế dành cho phong cách hiện đại
+        </span>
+
+    </div>
+
+
+    <div class="filter-bar">
+
+        <button class="filter active" onclick="filterProducts('all', this)">
+            Tất cả
+        </button>
+
+        <button class="filter" onclick="filterProducts('nam', this)">
+            Nam
+        </button>
+
+        <button class="filter" onclick="filterProducts('nu', this)">
+            Nữ
+        </button>
+
+        <button class="filter" onclick="filterProducts('unisex', this)">
+            Unisex
+        </button>
+
+    </div>
+
+
+    <div class="product-grid" id="productGrid">
+
+        <!-- PRODUCT 1 -->
+        <div class="product-card" data-category="nam">
+
+            <div class="product-image">
+
+                <span class="tag">BEST SELLER</span>
+
+                <img
+                    src="./images/thatlungda1.jpg"
+                    alt="Thắt lưng da mẫu 1 "
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="category">THẮT LƯNG NAM</p>
+
+                <h3>Thắt lưng da mẫu 1</h3>
+
+                <p class="description">
+                    Thắt lưng da đen thiết kế tối giản,
+                    phù hợp với quần jeans và quần âu.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>499.000₫</strong>
+
+                    <button onclick="addToCart('Thắt lưng da mẫu 1', 499000)">
+                        + Giỏ hàng
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 2 -->
+        <div class="product-card" data-category="unisex">
+
+            <div class="product-image">
+
+                <span class="tag">NEW</span>
+
+                <img
+                    src="images/thatlungda2.jpg"
+                    alt="Thắt lưng da mẫu 2"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="category">UNISEX</p>
+
+                <h3>Thắt lưng da mẫu 2</h3>
+
+                <p class="description">
+                    Chất liệu da màu nâu mang phong cách
+                    vintage, cá tính và dễ phối đồ.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>529.000₫</strong>
+
+                    <button onclick="addToCart('Thắt lưng da mẫu 2', 529000)">
+                        + Giỏ hàng
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 3 -->
+        <div class="product-card" data-category="nam">
+
+            <div class="product-image">
+
+                <img
+                    src="images/thatlungda3.jpg"
+                    alt="Thắt lưng da mẫu 3"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="category">THẮT LƯNG NAM</p>
+
+                <h3>Thắt lưng da mẫu 3</h3>
+
+                <p class="description">
+                    Thiết kế cao cấp với khóa kim loại
+                    chắc chắn, phù hợp đi làm và dự tiệc.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>599.000₫</strong>
+
+                    <button onclick="addToCart('Thắt lưng da mẫu 3', 599000)">
+                        + Giỏ hàng
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 4 -->
+        <div class="product-card" data-category="nu">
+
+            <div class="product-image">
+
+                <span class="tag">HOT</span>
+
+                <img
+                    src="images/thatlungda4.jpg"
+                    alt="Thắt lưng da mẫu 4"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="category">THẮT LƯNG NỮ</p>
+
+                <h3>Thắt lưng da mẫu 4</h3>
+
+                <p class="description">
+                    Thiết kế bản nhỏ thanh lịch,
+                    phù hợp với váy, jeans và quần tây.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>459.000₫</strong>
+
+                    <button onclick="addToCart('Thắt lưng da mẫu 4', 459000)">
+                        + Giỏ hàng
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 5 -->
+        <div class="product-card" data-category="unisex">
+
+            <div class="product-image">
+
+                <img
+                    src="images/thatlungda5.jpg"
+                    alt="Thắt lưng da mẫu 5"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="category">UNISEX</p>
+
+                <h3>Thắt lưng da mẫu 5</h3>
+
+                <p class="description">
+                    Phong cách trẻ trung, hiện đại,
+                    phù hợp với outfit hằng ngày.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>549.000₫</strong>
+
+                    <button onclick="addToCart('Thắt lưng da mẫu 5', 549000)">
+                        + Giỏ hàng
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+    <div class="about-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=1000&q=85"
+            alt="Leather fashion"
+        >
+
+    </div>
+
+    <div class="about-content">
+
+        <p class="small-title">ABOUT LEATHERX</p>
+
+        <h2>
+            ĐƠN GIẢN.
+            <br>
+            CHẤT LƯỢNG.
+            <br>
+            CÓ PHONG CÁCH.
+        </h2>
+
+        <p>
+            LEATHERX hướng đến những sản phẩm thắt lưng da
+            có thiết kế tối giản nhưng vẫn thể hiện cá tính
+            của người sử dụng.
+        </p>
+
+        <div class="features">
+
+            <div>
+                <span>01</span>
+                <h4>Da chất lượng</h4>
+                <p>Chất liệu bền và dễ bảo quản.</p>
+            </div>
+
+            <div>
+                <span>02</span>
+                <h4>Thiết kế hiện đại</h4>
+                <p>Phù hợp phong cách Gen Z.</p>
+            </div>
+
+            <div>
+                <span>03</span>
+                <h4>Dễ phối đồ</h4>
+                <p>Phù hợp nhiều phong cách.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+    <div>
+
+        <p class="small-title">CONTACT</p>
+
+        <h2>
+            SẴN SÀNG NÂNG CẤP
+            <br>
+            OUTFIT CỦA BẠN?
+        </h2>
+
+        <p>
+            Liên hệ với LEATHERX để được tư vấn mẫu
+            thắt lưng phù hợp.
+        </p>
+
+    </div>
+
+    <div class="contact-info">
+
+        <p>📞 0123 456 789</p>
+        <p>✉️ leatherx@gmail.com</p>
+        <p>📍 Hà Nội, Việt Nam</p>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="logo">
+        LEATHER<span>X</span>
+    </div>
+
+    <p>
+        © 2026 LEATHERX. Leather Fashion Store.
+    </p>
+
+</footer>
+
+
+<!-- CART -->
+<div class="cart-overlay" id="cartOverlay">
+
+    <div class="cart">
+
+        <div class="cart-header">
+
+            <h2>GIỎ HÀNG</h2>
+
+            <button onclick="closeCart()">×</button>
+
+        </div>
+
+        <div id="cartItems"></div>
+
+        <div class="cart-total">
+
+            <span>Tổng cộng</span>
+
+            <strong id="cartTotal">
+                0₫
+            </strong>
+
+        </div>
+
+        <button class="checkout" onclick="checkout()">
+            ĐẶT HÀNG
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
