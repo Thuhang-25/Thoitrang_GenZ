@@ -1,0 +1,378 @@
+/* =========================
+   CÀI ĐẶT CHUNG
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    color: #222;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    width: 100%;
+    height: 75px;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #ffcc00;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+.cart {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   BANNER (HERO)
+========================= */
+
+.banner {
+    min-height: 450px;
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+        ),
+        url("images/quan the thao 1.jpg"); /* Đổi sang ảnh quần thể thao */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.banner-content {
+    padding: 20px;
+}
+
+.small-title {
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #ffcc00;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.banner h1 {
+    font-size: 46px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.banner h1 span {
+    color: #ffcc00;
+}
+
+.banner p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+    display: inline-block;
+    background-color: #ffcc00;
+    color: #111;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: white;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   KHU VỰC SẢN PHẨM
+========================= */
+
+.products {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.products h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.description {
+    text-align: center;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+
+/* =========================
+   DANH SÁCH SẢN PHẨM
+========================= */
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+
+/* =========================
+   CARD SẢN PHẨM
+========================= */
+
+.product-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   ẢNH SẢN PHẨM
+========================= */
+
+.product-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* =========================
+   THÔNG TIN SẢN PHẨM
+========================= */
+
+.product-info {
+    padding: 20px;
+}
+
+.category {
+    display: inline-block;
+    color: #888;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.product-info h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    min-height: 42px;
+}
+
+.price {
+    color: #e63946;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   NÚT MUA
+========================= */
+
+.product-info button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #111;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.product-info button:hover {
+    background-color: #ffcc00;
+    color: #111;
+}
+
+
+/* =========================
+   GIỚI THIỆU
+========================= */
+
+.about {
+    background-color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.about h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.about p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.7;
+    color: #666;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+footer h3 span {
+    color: #ffcc00;
+}
+
+footer p {
+    margin: 8px 0;
+    color: #ccc;
+    font-size: 15px;
+}
+
+.copyright {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    font-size: 13px;
+    color: #888;
+}
+
+
+/* =========================
+   RESPONSIVE - TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .product-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVE - ĐIỆN THOẠI
+========================= */
+
+@media (max-width: 600px) {
+
+    header {
+        height: auto;
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .banner {
+        min-height: 350px;
+    }
+
+    .banner h1 {
+        font-size: 30px;
+    }
+
+    .banner p {
+        font-size: 15px;
+    }
+
+    .product-list {
+        grid-template-columns: 1fr;
+    }
+
+    .product-image img {
+        height: 320px;
+    }
+
+}
