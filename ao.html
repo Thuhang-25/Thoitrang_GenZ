@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thời Trang GenZ - Áo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+
+    .view-section {
+      display: none;
+    }
+    .view-section.active {
+      display: block;
+    }
+  </style>
+<style>
+    .product-description { font-size: 13px; line-height: 1.6; color: #555; margin: 8px 0 12px; }
+    .product-color { font-size: 13px; color: #333; margin-bottom: 16px; }
+    .logo-box { text-decoration: none; color: inherit; }
+  </style>
+</head>
+<body>
+
+  <header class="header-jm">
+    <div class="header-container">
+      <a href="index.html" class="logo-box">
+        <h1 class="logo-title">GenZ</h1>
+        <span class="logo-sub">Thoitrang GenZ</span>
+      </a>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html" class="sale-link"><span class="badge-sale">SALE</span> KHỞI NGUỒN TINH KHÔI <i class="fa-solid fa-angle-down"></i></a></li>
+          <li><a href="dam.html">ĐẦM</a></li>
+          <li><a href="ao.html" aria-current="page" style="color: #b8860b;" onclick="showList(event)">ÁO</a></li>
+          <li><a href="quan.html">QUẦN</a></li>
+          <li><a href="chanvay.html">CHÂN VÁY</a></li>
+          <li><a href="aokhoac.html">ÁO KHOÁC</a></li>
+          <li><a href="lookbook.html">THẮT LƯNG</a></li>
+          <li><a href="bst.html">BST MÙA ĐÔNG</a></li>
+        </ul>
+      </nav>
+      <div class="header-right">
+        <a href="#"><i class="fa-regular fa-heart"></i> <span>0</span></a>
+        <a href="#"><i class="fa-solid fa-bag-shopping"></i> <span>0</span></a>
+        <a href="taikhoan.html"><i class="fa-regular fa-user"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <div id="section-list" class="view-section active">
+    <!-- Breadcrumb danh sách -->
+    <div class="breadcrumb-banner">
+      <a href="index.html">Trang chủ</a> &gt; <span>Áo</span>
+    </div>
+
+    <div class="product-page-container">
+      <div class="product-filter-bar">
+        <div class="filter-left">
+          <span>Xem theo</span>
+          <select>
+            <option>Mới nhất</option>
+            <option>Giá thấp đến cao</option>
+            <option>Giá cao đến thấp</option>
+          </select>
+        </div>
+        <div class="filter-right">
+          Hiển thị <strong>6</strong> sản phẩm
+        </div>
+      </div>
+
+      <div class="product-grid">
+        <div class="product-card" data-price="785000" data-order="0" onclick="showDetail(&quot;Áo sơ mi hồng dáng rộng&quot;, &quot;785,000đ&quot;, &quot;AO001&quot;, &quot;hinhanh/ao-so-mi-hong.jpg&quot;, &quot;Chưa có đánh giá&quot;, &quot;0 nhận xét&quot;, &quot;0 đã bán&quot;, &quot;Hồng&quot;, &quot;Áo sơ mi hồng cổ bẻ, tay dài và hàng nút trước. Dáng rộng dễ mặc ngoài áo thun, phối cùng quần short hoặc quần jeans.&quot;)">
+          <div class="product-img-box"><img src="hinhanh/ao-so-mi-hong.jpg" alt="Áo sơ mi hồng dáng rộng" loading="lazy"></div>
+          <div class="product-info">
+            <h3><a href="javascript:void(0)">Áo sơ mi hồng dáng rộng</a></h3>
+            <div class="price-row"><span class="price">785,000đ</span><i class="fa-regular fa-heart like-icon"></i></div>
+            <p class="product-description">Áo sơ mi hồng cổ bẻ, tay dài và hàng nút trước. Dáng rộng dễ mặc ngoài áo thun, phối cùng quần short hoặc quần jeans.</p>
+            <p class="product-color">Màu sắc: <strong>Hồng</strong></p>
+          </div>
+        </div>
+
+        <div class="product-card" data-price="895000" data-order="1" onclick="showDetail(&quot;Áo sơ mi kẻ sọc tay ngắn&quot;, &quot;895,000đ&quot;, &quot;AO002&quot;, &quot;hinhanh/ao-so-mi-ke.webp&quot;, &quot;Chưa có đánh giá&quot;, &quot;0 nhận xét&quot;, &quot;0 đã bán&quot;, &quot;Xanh than&quot;, &quot;Áo sơ mi nền xanh than kẻ sọc trắng, cổ bẻ và tay ngắn rộng. Có thể mặc khoác ngoài áo trắng để tạo phong cách trẻ trung.&quot;)">
+          <div class="product-img-box"><img src="hinhanh/ao-so-mi-ke.webp" alt="Áo sơ mi kẻ sọc tay ngắn" loading="lazy"></div>
+          <div class="product-info">
+            <h3><a href="javascript:void(0)">Áo sơ mi kẻ sọc tay ngắn</a></h3>
+            <div class="price-row"><span class="price">895,000đ</span><i class="fa-regular fa-heart like-icon"></i></div>
+            <p class="product-description">Áo sơ mi nền xanh than kẻ sọc trắng, cổ bẻ và tay ngắn rộng. Có thể mặc khoác ngoài áo trắng để tạo phong cách trẻ trung.</p>
+            <p class="product-color">Màu sắc: <strong>Xanh than</strong></p>
+          </div>
+        </div>
+
+        <div class="product-card" data-price="650000" data-order="2" onclick="showDetail(&quot;Áo kiểu trắng vạt chéo&quot;, &quot;650,000đ&quot;, &quot;AO003&quot;, &quot;hinhanh/ao-trang-vat-cheo.jpg&quot;, &quot;Chưa có đánh giá&quot;, &quot;0 nhận xét&quot;, &quot;0 đã bán&quot;, &quot;Trắng&quot;, &quot;Áo trắng cổ V, tay dài bồng nhẹ, phần thân ôm eo và vạt chéo bất đối xứng. Phù hợp phối cùng quần âu hoặc chân váy.&quot;)">
+          <div class="product-img-box"><img src="hinhanh/ao-trang-vat-cheo.jpg" alt="Áo kiểu trắng vạt chéo" loading="lazy"></div>
+          <div class="product-info">
+            <h3><a href="javascript:void(0)">Áo kiểu trắng vạt chéo</a></h3>
+            <div class="price-row"><span class="price">650,000đ</span><i class="fa-regular fa-heart like-icon"></i></div>
+            <p class="product-description">Áo trắng cổ V, tay dài bồng nhẹ, phần thân ôm eo và vạt chéo bất đối xứng. Phù hợp phối cùng quần âu hoặc chân váy.</p>
+            <p class="product-color">Màu sắc: <strong>Trắng</strong></p>
+          </div>
+        </div>
+
+        <div class="product-card" data-price="920000" data-order="3" onclick="showDetail(&quot;Áo khoác xanh rêu túi hộp&quot;, &quot;920,000đ&quot;, &quot;AO004&quot;, &quot;hinhanh/ao-khoac-xanh.webp&quot;, &quot;Chưa có đánh giá&quot;, &quot;0 nhận xét&quot;, &quot;0 đã bán&quot;, &quot;Xanh rêu&quot;, &quot;Áo khoác xanh rêu dáng rộng, tay dài và túi hộp phía trước. Dễ phối nhiều lớp cùng áo thun và quần jeans.&quot;)">
+          <div class="product-img-box"><img src="hinhanh/ao-khoac-xanh.webp" alt="Áo khoác xanh rêu túi hộp" loading="lazy"></div>
+          <div class="product-info">
+            <h3><a href="javascript:void(0)">Áo khoác xanh rêu túi hộp</a></h3>
+            <div class="price-row"><span class="price">920,000đ</span><i class="fa-regular fa-heart like-icon"></i></div>
+            <p class="product-description">Áo khoác xanh rêu dáng rộng, tay dài và túi hộp phía trước. Dễ phối nhiều lớp cùng áo thun và quần jeans.</p>
+            <p class="product-color">Màu sắc: <strong>Xanh rêu</strong></p>
+          </div>
+        </div>
+
+        <div class="product-card" data-price="1150000" data-order="4" onclick="showDetail(&quot;Áo blouse hoa bo eo&quot;, &quot;1,150,000đ&quot;, &quot;AO005&quot;, &quot;hinhanh/ao-blouse.jpg&quot;, &quot;Chưa có đánh giá&quot;, &quot;0 nhận xét&quot;, &quot;0 đã bán&quot;, &quot;Hồng nhạt&quot;, &quot;Áo blouse nền hồng nhạt với họa tiết hoa, cổ cao, tay bồng dài và eo bo nhún. Phối cùng quần trơn để làm nổi bật họa tiết.&quot;)">
+          <div class="product-img-box"><img src="hinhanh/ao-blouse.jpg" alt="Áo blouse hoa bo eo" loading="lazy"></div>
+          <div class="product-info">
+            <h3><a href="javascript:void(0)">Áo blouse hoa bo eo</a></h3>
+            <div class="price-row"><span class="price">1,150,000đ</span><i class="fa-regular fa-heart like-icon"></i></div>
+            <p class="product-description">Áo blouse nền hồng nhạt với họa tiết hoa, cổ cao, tay bồng dài và eo bo nhún. Phối cùng quần trơn để làm nổi bật họa tiết.</p>
+            <p class="product-color">Màu sắc: <strong>Hồng nhạt</strong></p>
+          </div>
+        </div>
+
+        <div class="product-card" data-price="820000" data-order="5" onclick="showDetail(&quot;Áo kiểu cổ bèo màu kem&quot;, &quot;820,000đ&quot;, &quot;AO006&quot;, &quot;hinhanh/ao-co-beo.webp&quot;, &quot;Chưa có đánh giá&quot;, &quot;0 nhận xét&quot;, &quot;0 đã bán&quot;, &quot;Kem&quot;, &quot;Áo màu kem cổ bèo bản rộng, tay dài họa tiết ren và hàng nút trước. Kết hợp cùng chân váy cho phong cách thanh lịch.&quot;)">
+          <div class="product-img-box"><img src="hinhanh/ao-co-beo.webp" alt="Áo kiểu cổ bèo màu kem" loading="lazy"></div>
+          <div class="product-info">
+            <h3><a href="javascript:void(0)">Áo kiểu cổ bèo màu kem</a></h3>
+            <div class="price-row"><span class="price">820,000đ</span><i class="fa-regular fa-heart like-icon"></i></div>
+            <p class="product-description">Áo màu kem cổ bèo bản rộng, tay dài họa tiết ren và hàng nút trước. Kết hợp cùng chân váy cho phong cách thanh lịch.</p>
+            <p class="product-color">Màu sắc: <strong>Kem</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="section-detail" class="view-section">
+    <div class="detail-search-bar">
+      <div class="search-box-container detail-search">
+        <input type="text" placeholder="Bạn muốn tìm sản phẩm gì ?">
+        <button type="submit">Tìm kiếm ngay</button>
+      </div>
+    </div>
+
+    <div class="breadcrumb-banner">
+      <a href="index.html">Trang chủ</a> &gt; <a href="#" onclick="showList(event)">Áo</a> &gt; <span id="detail-bc-title">Tên sản phẩm</span>
+    </div>
+
+    <div class="detail-container">
+      <div class="detail-thumbnails">
+        <img id="thumb1" src="hinhanh/ao-so-mi-hong.jpg" class="active" alt="thumb1">
+        <img id="thumb2" src="hinhanh/ao-so-mi-hong.jpg" alt="thumb2">
+        <img id="thumb3" src="hinhanh/ao-so-mi-hong.jpg" alt="thumb3">
+        <img id="thumb4" src="hinhanh/ao-so-mi-hong.jpg" alt="thumb4">
+      </div>
+
+      <div class="detail-main-img">
+        <img id="detail-product-img" src="hinhanh/ao-so-mi-hong.jpg" alt="Ảnh chính">
+      </div>
+
+      <div class="detail-info">
+        <h1 class="detail-title" id="detail-product-title">Tên sản phẩm</h1>
+        <div class="detail-meta">
+          <span id="detail-product-sku">SKU: IF09.2808</span>
+          <span class="detail-stars" id="detail-product-stars">★★★★★ (0)</span>
+          <span id="detail-product-reviews">0 Nhận xét</span>
+        </div>
+
+        <div class="detail-price" id="detail-product-price">0đ</div>
+        <p class="product-description" id="detail-product-description"></p>
+
+        <div class="promo-banner-box">
+          <p>Trả sau đến 12 tháng với <strong>Fundiin</strong> <i class="fa-solid fa-circle-question"></i></p>
+          <div class="promo-tag">
+            <span class="percent">%</span>
+            <span>Giảm đến <strong>50K</strong> khi thanh toán qua Fundiin. <u>xem thêm</u></span>
+          </div>
+        </div>
+
+        <div class="option-row">
+          <label>Màu sắc:</label>
+          <div class="color-options"><span id="detail-product-color">Hồng</span></div>
+        </div>
+
+        <div class="option-row">
+          <label>Size:</label>
+          <div class="size-options">
+            <button>S</button>
+            <button class="active">M</button>
+            <button>L</button>
+            <button>XL</button>
+          </div>
+        </div>
+
+        <div class="option-row">
+          <label>Số lượng:</label>
+          <div class="quantity-box">
+            <button>-</button>
+            <input type="text" value="1">
+            <button>+</button>
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <button class="btn-like"><i class="fa-regular fa-heart"></i></button>
+          <button class="btn-add-cart">THÊM VÀO GIỎ HÀNG</button>
+          <button class="btn-buy-now">MUA NGAY</button>
+        </div>
+
+        <div class="size-guide">
+          <span>Bảng size</span> <span>+</span>
+        </div>
+
+        <div class="review-summary">
+          <h3>Đánh giá sản phẩm</h3>
+          <p id="detail-review-count">0 đánh giá</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="taikhoan.html" class="floating-chat-btn" title="Đăng nhập / Tài khoản">
+    <i class="fa-solid fa-user-astronaut"></i>
+  </a>
+
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <div class="company-info"><p>©2009-2026 Thoitrang GenZ All Rights Reserved</p></div>
+    </div>
+  </footer>
+
+  <script>
+    function showDetail(title, price, sku, imgSrc, stars, reviews, sold, color, description) {
+      document.getElementById('section-list').classList.remove('active');
+      document.getElementById('section-detail').classList.add('active');
+      
+      document.getElementById('detail-product-title').innerText = title;
+      document.getElementById('detail-product-color').textContent = color;
+      document.getElementById('detail-product-description').textContent = description;
+      document.querySelectorAll('.detail-container img').forEach(img => { img.alt = title; });
+      document.getElementById('detail-product-price').innerText = price;
+      document.getElementById('detail-product-sku').innerText = 'SKU: ' + sku;
+      document.getElementById('detail-bc-title').innerText = title;
+      
+      document.getElementById('detail-product-stars').innerText = stars;
+      document.getElementById('detail-product-reviews').innerText = reviews;
+      document.getElementById('detail-review-count').innerText = reviews + ' / ' + sold;
+      
+      document.getElementById('detail-product-img').src = imgSrc;
+      document.getElementById('thumb1').src = imgSrc;
+      document.getElementById('thumb2').src = imgSrc;
+      document.getElementById('thumb3').src = imgSrc;
+      document.getElementById('thumb4').src = imgSrc;
+      
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showList(event) {
+      if(event) event.preventDefault();
+      document.getElementById('section-detail').classList.remove('active');
+      document.getElementById('section-list').classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
