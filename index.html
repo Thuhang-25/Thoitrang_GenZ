@@ -6,16 +6,112 @@
   <title>Thời Trang GenZ - JM Dress Design</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* CSS BỔ SUNG CHO BỘ BST VÀ SẢN PHẨM BÁN CHẠY */
+    .banner-grid-section {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 15px;
+    }
+    .banner-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .banner-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 4px;
+    }
+    .banner-card img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .banner-card:hover img {
+      transform: scale(1.03);
+    }
+
+    .best-seller-section {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 15px;
+      text-align: center;
+    }
+    .section-title {
+      font-size: 22px;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+      color: #333;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .best-seller-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 15px;
+    }
+    .best-seller-card {
+      text-align: left;
+      cursor: pointer;
+    }
+    .best-seller-card .img-box {
+      width: 100%;
+      height: 220px;
+      overflow: hidden;
+      margin-bottom: 10px;
+      border-radius: 2px;
+    }
+    .best-seller-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .best-seller-card:hover img {
+      transform: scale(1.05);
+    }
+    .best-seller-card h3 {
+      font-size: 13px;
+      font-weight: 500;
+      color: #333;
+      margin-bottom: 5px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .best-seller-card .price {
+      color: #d9534f;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    @media (max-width: 992px) {
+      .best-seller-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    @media (max-width: 576px) {
+      .banner-grid {
+        grid-template-columns: 1fr;
+      }
+      .best-seller-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
 </head>
 <body>
 
   <header class="header-jm">
     <div class="header-container">
       
-<div class="logo-box">
-  <h1 class="logo-title">GenZ</h1>
-  <span class="logo-sub">Thoitrang GenZ</span>
-</div>
+      <div class="logo-box">
+        <h1 class="logo-title">GenZ</h1>
+        <span class="logo-sub">Thoitrang GenZ</span>
+      </div>
  
       <nav class="nav-menu">
         <ul>
@@ -26,13 +122,13 @@
             </a>
           </li>
           <li><a href="dam.html">ĐẦM</a></li>
-          <li><a href="./ao.html">ÁO</a>
+          <li><a href="./ao.html">ÁO</a></li>
           <li><a href="quan.html">QUẦN</a></li>
           <li><a href="chanvay.html">CHÂN VÁY</a></li>
           <li><a href="aokhoac.html">ÁO KHOÁC</a></li>
           <li><a href="thatlung.html">THẮT LƯNG</a></li>
-           <li><a href="phukien.html">PHỤ KIỆN</a></li>
-          <li><a href="bst.html">BST MÙA ĐÔNG</a></li>
+          <li><a href="phukien.html">PHỤ KIỆN</a></li>
+          <li><a href="bstmuadong.html">BST MÙA ĐÔNG</a></li>
         </ul>
       </nav>
 
@@ -61,9 +157,9 @@
       <button type="submit">Tìm kiếm ngay</button>
     </div>
 
-<a href="taikhoan.html" class="floating-chat-btn" title="Đăng nhập / Tài khoản">
-  <i class="fa-solid fa-user-astronaut"></i>
-</a>
+    <a href="taikhoan.html" class="floating-chat-btn" title="Đăng nhập / Tài khoản">
+      <i class="fa-solid fa-user-astronaut"></i>
+    </a>
   </section>
 
   <section class="category-menu-section">
@@ -114,7 +210,7 @@
         </div>
       </a>
 
-       <a href="thatlung.html" class="circle-item">
+      <a href="thatlung.html" class="circle-item">
         <div class="circle-border">
           <div class="circle-inner">
             <i class="fa-solid fa-ruler-horizontal"></i>
@@ -132,7 +228,7 @@
         </div>
       </a>
 
-      <a href="bstmuadong.html" class="circle-item">
+      <a href="bst.html" class="circle-item">
         <div class="circle-border">
           <div class="circle-inner">
             <i class="fa-solid fa-snowflake"></i>
@@ -141,6 +237,75 @@
         </div>
       </a>
 
+    </div>
+  </section>
+
+  <!-- SECTIONS MỚI THEO ẢNH 2 -->
+  <section class="banner-grid-section">
+    <div class="banner-grid">
+      <a href="bst.html" class="banner-card">
+        <img src="anhQuan/quan2.webp" alt="Quần Jean Nữ Cao Cấp">
+      </a>
+      <a href="bst.html" class="banner-card">
+        <img src="anhAokhoac/aokhoac7.jpg" alt="Áo Phao Ấm Áp">
+      </a>
+      <a href="bst.html" class="banner-card">
+        <img src="anhAokhoac/aokhoac5.jpg" alt="Áo Lông Vũ Mềm Mại">
+      </a>
+    </div>
+  </section>
+
+  <section class="best-seller-section">
+    <h2 class="section-title">SẢN PHẨM BÁN CHẠY</h2>
+    
+    <div class="best-seller-grid">
+      <div class="best-seller-card" onclick="location.href='dam.html'">
+        <div class="img-box">
+          <img src="hinhanh/dam1.jpg" alt="Đầm Bán Chạy 1">
+        </div>
+        <h3>Đầm voan tơ hồng cổ V</h3>
+        <div class="price">785,000đ</div>
+      </div>
+
+      <div class="best-seller-card" onclick="location.href='dam.html'">
+        <div class="img-box">
+          <img src="hinhanh/dam2.jpg" alt="Đầm Bán Chạy 2">
+        </div>
+        <h3>Đầm cúp ngực phối lông</h3>
+        <div class="price">895,000đ</div>
+      </div>
+
+      <div class="best-seller-card" onclick="location.href='dam.html'">
+        <div class="img-box">
+          <img src="hinhanh/dam3.jpg" alt="Đầm Bán Chạy 3">
+        </div>
+        <h3>Đầm 2 dây cổ đổ</h3>
+        <div class="price">650,000đ</div>
+      </div>
+
+      <div class="best-seller-card" onclick="location.href='dam.html'">
+        <div class="img-box">
+          <img src="hinhanh/dam4.jpg" alt="Đầm Bán Chạy 4">
+        </div>
+        <h3>Đầm hồng xòe đính nơ</h3>
+        <div class="price">920,000đ</div>
+      </div>
+
+      <div class="best-seller-card" onclick="location.href='dam.html'">
+        <div class="img-box">
+          <img src="hinhanh/dam5.jpg" alt="Đầm Bán Chạy 5">
+        </div>
+        <h3>Đầm cổ yếm đính đá</h3>
+        <div class="price">1,150,000đ</div>
+      </div>
+
+      <div class="best-seller-card" onclick="location.href='dam.html'">
+        <div class="img-box">
+          <img src="hinhanh/dam6.jpg" alt="Đầm Bán Chạy 6">
+        </div>
+        <h3>Đầm lụa bóng đính nơ</h3>
+        <div class="price">820,000đ</div>
+      </div>
     </div>
   </section>
 
