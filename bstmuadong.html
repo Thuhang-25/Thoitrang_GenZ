@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thời Trang GenZ - BST Mùa Đông</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .view-section {
+      display: none;
+    }
+    .view-section.active {
+      display: block;
+    }
+  </style>
+
+<style>
+  .selected-color {
+    display: inline-block;
+    min-width: 45px;
+    font-weight: 500;
+  }
+
+  .btn-like i.liked {
+    color: red !important;
+    font-weight: 900;
+  }
+</style>
+
+</head>
+<body>
+
+  <header class="header-jm">
+    <div class="header-container">
+      <a href="index.html" class="logo-box">
+        <h1 class="logo-title">GenZ</h1>
+        <span class="logo-sub">Thoitrang GenZ</span>
+      </a>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html" class="sale-link"><span class="badge-sale">SALE</span> KHỞI NGUỒN TINH KHÔI <i class="fa-solid fa-angle-down"></i></a></li>
+          <li><a href="dam.html">ĐẦM</a></li>
+          <li><a href="ao.html">ÁO</a></li>
+          <li><a href="quan.html">QUẦN</a></li>
+          <li><a href="chanvay.html">CHÂN VÁY</a></li>
+          <li><a href="aokhoac.html">ÁO KHOÁC</a></li>
+          <li><a href="thatlung.html">THẮT LƯNG</a></li>
+          <li><a href="bst.html" style="color: #b8860b;">BST MÙA ĐÔNG</a></li>
+        </ul>
+      </nav>
+      <div class="header-right">
+        <a href="#"><i class="fa-regular fa-heart"></i> <span>0</span></a>
+        <a href="#" onclick="openCart(event)"><i class="fa-solid fa-bag-shopping"></i> <span id="cart-count">0</span></a>
+        <a href="taikhoan.html"><i class="fa-regular fa-user"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <div id="section-list" class="view-section active">
+    <div class="breadcrumb-banner">
+      <a href="index.html">Trang chủ</a> &gt; <span>BST Mùa Đông</span>
+    </div>
+
+    <div class="product-page-container">
+      <div class="product-filter-bar">
+        <div class="filter-left">
+          <span>Xem theo</span>
+          <select id="sortProducts">
+            <option value="newest">Mới nhất</option>
+            <option value="price-asc">Giá thấp đến cao</option>
+            <option value="price-desc">Giá cao đến thấp</option>
+          </select>
+        </div>
+        <div class="filter-right">
+          Tổng số sản phẩm: <strong>8</strong>
+        </div>
+      </div>
+
+      <div class="product-grid" id="product-grid">
+        <div class="product-card" data-price="2190000" onclick="showDetail('Áo khoác phao Zara nữ dáng ngắn', '2,190,000đ', 'ZR-AW01', 'hinhanh/hinh2.jfif', '★★★★★ (96)', '96 nhận xét', '342 đã bán', 'Đen')">
+          <div class="product-img-box">
+            <img src="hinhanh/hinh2.jfif" alt="Áo khoác phao Zara nữ dáng ngắn">
+          </div>
+          <div class="product-info">
+            <h3><a href="javascript:void(0)">Áo khoác phao Zara nữ dáng ngắn</a></h3>
+            <div class="price-row">
+              <span class="price">2,190,000đ</span>
+              <i class="fa-regular fa-heart like-icon"></i>
+            </div>
+            <div class="meta-row">
+              <span class="rating">★★★★★ (96)</span>
+              <span class="sold">(342 đã bán)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-price="1590000" onclick="showDetail('Áo len cổ lọ Mango nữ', '1,590,000đ', 'MG-AW02', 'hinhanh/hinh3.jfif', '★★★★★ (118)', '118 nhận xét', '521 đã bán', 'Be')">
+          <div class="product-img-box">
+            <img src="hinhanh/hinh3.jfif" alt="Áo len cổ lọ Mango nữ">
+          </div>
+          <div class="product-info">
+            <h3><a href="javascript:void(0)">Áo len cổ lọ Mango nữ</a></h3>
+            <div class="price-row">
+              <span class="price">1,590,000đ</span>
+              <i class="fa-regular fa-heart like-icon"></i>
+            </div>
+            <div class="meta-row">
+              <span class="rating">★★★★★ (118)</span>
+              <span class="sold">(521 đã bán)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-price="890000" onclick="showDetail('Quần nỉ nữ H&M Relaxed Fit', '890,000đ', 'HM-AW03', 'hinhanh/hinh4.jfif', '★★★★☆ (82)', '82 nhận xét', '287 đã bán', 'Xám')">
+          <div class="product-img-box">
+            <img src="hinhanh/hinh4.jfif" alt="Quần nỉ nữ H&M Relaxed Fit">
+          </div>
+          <div class="product-info">
+            <h3><a href="javascript:void(0)">Quần nỉ nữ H&M Relaxed Fit</a></h3>
+            <div class="price-row">
+              <span class="price">890,000đ</span>
+              <i class="fa-regular fa-heart like-icon"></i>
+            </div>
+            <div class="meta-row">
+              <span class="rating">★★★★☆ (82)</span>
+              <span class="sold">(287 đã bán)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-price="1290000" onclick="showDetail('Áo cardigan Uniqlo nữ dáng mềm', '1,290,000đ', 'UQ-AW04', 'hinhanh/hinh5.jfif', '★★★★★ (76)', '76 nhận xét', '314 đã bán', 'Be')">
+          <div class="product-img-box">
+            <img src="hinhanh/hinh5.jfif" alt="Áo cardigan Uniqlo nữ dáng mềm">
+          </div>
+          <div class="product-info">
+            <h3><a href="javascript:void(0)">Áo cardigan Uniqlo nữ dáng mềm</a></h3>
+            <div class="price-row">
+              <span class="price">1,290,000đ</span>
+              <i class="fa-regular fa-heart like-icon"></i>
+            </div>
+            <div class="meta-row">
+              <span class="rating">★★★★★ (76)</span>
+              <span class="sold">(314 đã bán)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-price="2790000" onclick="showDetail('Áo khoác dạ nữ Mango Belted', '2,790,000đ', 'MG-AW05', 'hinhanh/hinh6.jfif', '★★★★★ (104)', '104 nhận xét', '198 đã bán', 'Đen')">
+          <div class="product-img-box">
+            <img src="hinhanh/hinh6.jfif" alt="Áo khoác dạ nữ Mango Belted">
+          </div>
+          <div class="product-info">
+            <h3><a href="javascript:void(0)">Áo khoác dạ nữ Mango Belted</a></h3>
+            <div class="price-row">
+              <span class="price">2,790,000đ</span>
+              <i class="fa-regular fa-heart like-icon"></i>
+            </div>
+            <div class="meta-row">
+              <span class="rating">★★★★★ (104)</span>
+              <span class="sold">(198 đã bán)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-price="1090000" onclick="showDetail('Áo hoodie nữ H&M Oversized', '1,090,000đ', 'HM-AW06', 'hinhanh/hinh7.jfif', '★★★★☆ (69)', '69 nhận xét', '235 đã bán', 'Đen')">
+          <div class="product-img-box">
+            <img src="hinhanh/hinh7.jfif" alt="Áo hoodie nữ H&M Oversized">
+          </div>
+          <div class="product-info">
+            <h3><a href="javascript:void(0)">Áo hoodie nữ H&M Oversized</a></h3>
+            <div class="price-row">
+              <span class="price">1,090,000đ</span>
+              <i class="fa-regular fa-heart like-icon"></i>
+            </div>
+            <div class="meta-row">
+              <span class="rating">★★★★☆ (69)</span>
+              <span class="sold">(235 đã bán)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-price="2190000" onclick="showDetail('Massimo Dutti Womens Wide Leg Trousers', '2,190,000đ', 'MD-AW07', 'hinhanh/hinh8.jfif', '★★★★★ (142)', '142 nhận xét', '438 đã bán', 'Đen')">
+          <div class="product-img-box">
+            <img src="hinhanh/hinh8.jfif" alt="Massimo Dutti Womens Wide Leg Trousers">
+          </div>
+          <div class="product-info">
+            <h3><a href="javascript:void(0)">Massimo Dutti Womens Wide Leg Trousers</a></h3>
+            <div class="price-row">
+              <span class="price">2,190,000đ</span>
+              <i class="fa-regular fa-heart like-icon"></i>
+            </div>
+            <div class="meta-row">
+              <span class="rating">★★★★★ (142)</span>
+              <span class="sold">(438 đã bán)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-price="2390000" onclick="showDetail('Áo khoác trench nữ Uniqlo', '2,390,000đ', 'UQ-AW08', 'hinhanh/hinh9.jfif', '★★★★★ (111)', '111 nhận xét', '361 đã bán', 'Be')">
+          <div class="product-img-box">
+            <img src="hinhanh/hinh9.jfif" alt="Áo khoác trench nữ Uniqlo">
+          </div>
+          <div class="product-info">
+            <h3><a href="javascript:void(0)">Áo khoác trench nữ Uniqlo</a></h3>
+            <div class="price-row">
+              <span class="price">2,390,000đ</span>
+              <i class="fa-regular fa-heart like-icon"></i>
+            </div>
+            <div class="meta-row">
+              <span class="rating">★★★★★ (111)</span>
+              <span class="sold">(361 đã bán)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="section-detail" class="view-section">
+    <div class="detail-search-bar">
+      <div class="search-box-container detail-search">
+        <input type="text" placeholder="Bạn muốn tìm sản phẩm gì ?">
+        <button type="submit">Tìm kiếm ngay</button>
+      </div>
+    </div>
+
+    <div class="breadcrumb-banner">
+      <a href="index.html">Trang chủ</a> &gt; <a href="#" onclick="showList(event)">BST Mùa Đông</a> &gt; <span id="detail-bc-title">Tên sản phẩm</span>
+    </div>
+
+    <div class="detail-container">
+      <div class="detail-thumbnails">
+        <img id="thumb1" src="hinhanh/hinh2-1 (1).jfif" class="active" alt="thumb1">
+        <img id="thumb2" src="hinhanh/hinh2-2.jfif" alt="thumb2">
+        <img id="thumb3" src="hinhanh/hinh2-3.jfif" alt="thumb3">
+        <img id="thumb4" src="hinhanh/hinh2-4.jfif" alt="thumb4">
+      </div>
+
+      <div class="detail-main-img">
+        <img id="detail-product-img" src="hinhanh/hinh2.jfif" alt="Ảnh chính">
+      </div>
+
+      <div class="detail-info">
+        <h1 class="detail-title" id="detail-product-title">Tên sản phẩm</h1>
+        <div class="detail-meta">
+          <span id="detail-product-sku">SKU: IF09.2906</span>
+          <span class="detail-stars" id="detail-product-stars">★★★★★ (0)</span>
+          <span id="detail-product-reviews">0 Nhận xét</span>
+        </div>
+
+        <div class="detail-price" id="detail-product-price">0đ</div>
+
+        <div class="promo-banner-box">
+          <p>Trả sau đến 12 tháng với <strong>Fundiin</strong> <i class="fa-solid fa-circle-question"></i></p>
+          <div class="promo-tag">
+            <span class="percent">%</span>
+            <span>Giảm đến <strong>50K</strong> khi thanh toán qua Fundiin. <u>xem thêm</u></span>
+          </div>
+        </div>
+
+        <div class="option-row">
+          <label>Màu sắc:</label>
+          <div class="color-options"><span id="detail-product-color" class="selected-color">Be</span></div>
+        </div>
+
+        <div class="option-row">
+          <label>Size:</label>
+          <div class="size-options">
+            <button>S</button>
+            <button class="active">M</button>
+            <button>L</button>
+            <button>XL</button>
+          </div>
+        </div>
+
+        <div class="option-row">
+          <label>Số lượng:</label>
+          <div class="quantity-box">
+            <button>-</button>
+            <input type="text" value="1">
+            <button>+</button>
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <button class="btn-like"><i class="fa-regular fa-heart"></i></button>
+          <button class="btn-add-cart">THÊM VÀO GIỎ HÀNG</button>
+          <button class="btn-buy-now">MUA NGAY</button>
+        </div>
+<div class="review-summary">
+          <h3>Đánh giá sản phẩm</h3>
+          <p id="detail-review-count">0 đánh giá</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="taikhoan.html" class="floating-chat-btn" title="Đăng nhập / Tài khoản">
+    <i class="fa-solid fa-user-astronaut"></i>
+  </a>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <div class="footer-col">
+        <h4>THỜI TRANG GENZ</h4>
+        <ul>
+          <li><a href="#">Giới thiệu</a></li>
+          <li><a href="#">Tin tức</a></li>
+          <li><a href="#">Hệ thống cửa hàng</a></li>
+          <li><a href="#">Thông tin tuyển dụng</a></li>
+          <li><a href="#">Liên hệ hợp tác kinh doanh</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>LIÊN KẾT VỚI CHÚNG TÔI</h4>
+        <ul class="social-links">
+          <li><a href="#"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+          <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+          <li><a href="#"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
+          <li><a href="#"><i class="fa-solid fa-envelope"></i> Email: ThoitrangGenZ@gmail.com.vn</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>CHĂM SÓC KHÁCH HÀNG</h4>
+        <ul>
+          <li><a href="#">Chính sách vận chuyển</a></li>
+          <li><a href="#">Chính sách tích điểm</a></li>
+          <li><a href="#">Chính sách bảo mật</a></li>
+          <li><a href="#">Chế độ bảo hành trọn đời</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col newsletter-col">
+        <h4>ĐĂNG KÝ MAIL NHẬN ƯU ĐÃI TỪ Thoitrang GenZ</h4>
+        <form id="subscribeForm" onsubmit="handleSubscribe(event)">
+          <div class="input-group">
+            <input type="email" id="emailInput" placeholder="Nhập email của bạn" required>
+            <button type="submit">GỬI NGAY</button>
+          </div>
+        </form>
+        <p class="terms-text">
+          Bằng cách nhấp vào nút <a href="#">ĐĂNG KÝ</a>, bạn đồng ý với Chính sách bảo mật và cookie của chúng tôi.
+          Vui lòng <a href="taikhoan.html">ĐĂNG NHẬP</a> khi bạn đã có tài khoản.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="bottom-container">
+        <p>©2009-2026 Thoitrang GenZ All Rights Reserved</p>
+        <div class="payment-info">
+          <span>Chúng tôi nhận thanh toán qua:</span>
+          <img src="hinhanh/logo vnpay.png" alt="VNPAY" class="payment-logo">
+        </div>
+      </div>
+
+      <div class="company-info">
+        <p><strong>CÔNG TY CỔ PHẦN THƯƠNG MẠI VIỆT NAM</strong></p>
+        <p>Trụ sở chính: Đại học Phenikaa</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    let selectedSize = 'M';
+    let selectedColor = 'Be';
+    let currentProduct = null;
+
+    function showDetail(title, price, sku, imgSrc, stars, reviews, sold, color) {
+      document.getElementById('section-list').classList.remove('active');
+      document.getElementById('section-detail').classList.add('active');
+
+      currentProduct = { title, price, sku, imgSrc, color };
+      selectedColor = color;
+      selectedSize = 'M';
+
+      document.getElementById('detail-product-title').textContent = title;
+      document.getElementById('detail-product-img').src = imgSrc;
+      document.getElementById('detail-product-price').textContent = price;
+      document.getElementById('detail-product-sku').textContent = 'SKU: ' + sku;
+      document.getElementById('detail-product-stars').textContent = stars;
+      document.getElementById('detail-product-reviews').textContent = reviews;
+      document.getElementById('detail-review-count').textContent = reviews + ' / ' + sold;
+      document.getElementById('detail-bc-title').textContent = title;
+
+    const gallery = [
+      imgSrc,
+      imgSrc.replace('.jfif', '-2.jfif'),
+      imgSrc.replace('.jfif', '-3.jfif'),
+      imgSrc.replace('.jfif', '-4.jfif')
+    ];
+
+    const thumbnails = [
+      document.getElementById('thumb1'),
+      document.getElementById('thumb2'),
+      document.getElementById('thumb3'),
+      document.getElementById('thumb4')
+    ];
+
+    thumbnails.forEach((thumb, index) => {
+      if (!thumb) return;
+
+      thumb.src = gallery[index];
+      thumb.classList.toggle('active', index === 0);
+
+      thumb.onclick = function(event) {
+        event.stopPropagation();
+
+        document.getElementById('detail-product-img').src = this.src;
+
+        thumbnails.forEach(img => {
+          if (img) img.classList.remove('active');
+        });
+
+        this.classList.add('active');
+      };
+    });
+
+      document.getElementById('detail-product-color').textContent = selectedColor;
+
+      document.querySelectorAll('.size-options button').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.trim() === 'M');
+      });
+
+      document.querySelector('.quantity-box input').value = 1;
+
+      const detailHeart = document.querySelector('.btn-like i');
+      detailHeart.classList.remove('fa-solid', 'liked');
+      detailHeart.classList.add('fa-regular');
+      detailHeart.style.color = '';
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showList(event) {
+      if (event) event.preventDefault();
+      document.getElementById('section-detail').classList.remove('active');
+      document.getElementById('section-list').classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showNotification(message) {
+      const old = document.querySelector('.custom-notification');
+      if (old) old.remove();
+
+      const notification = document.createElement('div');
+      notification.className = 'custom-notification';
+      notification.textContent = message;
+
+      Object.assign(notification.style, {
+        position: 'fixed',
+        top: '25px',
+        left: '50%',
+        transform: 'translateX(-50%)',
+        background: '#222',
+        color: '#fff',
+        padding: '14px 24px',
+        borderRadius: '6px',
+        zIndex: '99999',
+        fontSize: '15px',
+        boxShadow: '0 4px 15px rgba(0,0,0,.25)'
+      });
+
+      document.body.appendChild(notification);
+
+      setTimeout(() => {
+        notification.style.opacity = '0';
+        notification.style.transition = 'opacity .3s ease';
+        setTimeout(() => notification.remove(), 300);
+      }, 1800);
+    }
+
+    document.querySelectorAll('.size-options button').forEach(button => {
+      button.addEventListener('click', function(event) {
+        event.stopPropagation();
+        document.querySelectorAll('.size-options button').forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+        selectedSize = this.textContent.trim();
+      });
+    });
+
+    const quantityInput = document.querySelector('.quantity-box input');
+    const quantityButtons = document.querySelectorAll('.quantity-box button');
+
+    quantityButtons[0].addEventListener('click', function(event) {
+      event.stopPropagation();
+      quantityInput.value = Math.max(1, (parseInt(quantityInput.value) || 1) - 1);
+    });
+
+    quantityButtons[1].addEventListener('click', function(event) {
+      event.stopPropagation();
+      quantityInput.value = (parseInt(quantityInput.value) || 1) + 1;
+    });
+
+    document.querySelector('.btn-like').addEventListener('click', function(event) {
+      event.stopPropagation();
+      const icon = this.querySelector('i');
+
+      if (icon.classList.contains('liked')) {
+        icon.classList.remove('liked', 'fa-solid');
+        icon.classList.add('fa-regular');
+        icon.style.color = '';
+      } else {
+        icon.classList.remove('fa-regular');
+        icon.classList.add('fa-solid', 'liked');
+        icon.style.color = 'red';
+      }
+    });
+
+    document.querySelectorAll('.like-icon').forEach(icon => {
+      icon.addEventListener('click', function(event) {
+        event.stopPropagation();
+
+        if (this.classList.contains('liked')) {
+          this.classList.remove('liked', 'fa-solid');
+          this.classList.add('fa-regular');
+          this.style.color = '';
+        } else {
+          this.classList.remove('fa-regular');
+          this.classList.add('fa-solid', 'liked');
+          this.style.color = 'red';
+        }
+      });
+    });
+
+    document.querySelector('.btn-add-cart').addEventListener('click', function(event) {
+      event.stopPropagation();
+      if (!currentProduct) return;
+
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push({
+        ...currentProduct,
+        size: selectedSize,
+        color: selectedColor,
+        quantity: parseInt(quantityInput.value) || 1
+      });
+
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCount();
+      showNotification('Đã thêm vào giỏ');
+    });
+
+    document.querySelector('.btn-buy-now').addEventListener('click', function(event) {
+      event.stopPropagation();
+      if (!currentProduct) return;
+      showNotification('Đã mua sản phẩm');
+    });
+
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const total = cart.reduce((sum, item) => sum + (parseInt(item.quantity) || 1), 0);
+      const count = document.getElementById('cart-count');
+      if (count) count.textContent = total;
+    }
+
+    document.querySelectorAll('.detail-thumbnails img').forEach(thumb => {
+      thumb.addEventListener('click', function(event) {
+        event.stopPropagation();
+        document.querySelectorAll('.detail-thumbnails img').forEach(img => img.classList.remove('active'));
+        this.classList.add('active');
+        document.getElementById('detail-product-img').src = this.src;
+      });
+    });
+
+    function sortProducts(order) {
+      const grid = document.getElementById('product-grid');
+      const products = Array.from(grid.children);
+
+      if (order === 'price-asc') {
+        products.sort((a, b) => Number(a.dataset.price) - Number(b.dataset.price));
+      } else if (order === 'price-desc') {
+        products.sort((a, b) => Number(b.dataset.price) - Number(a.dataset.price));
+      } else {
+        products.sort((a, b) => Number(a.dataset.originalOrder) - Number(b.dataset.originalOrder));
+      }
+
+      products.forEach(product => grid.appendChild(product));
+    }
+
+    document.querySelectorAll('#product-grid .product-card').forEach((product, index) => {
+      product.dataset.originalOrder = index;
+    });
+
+    document.getElementById('sortProducts').addEventListener('change', function() {
+      sortProducts(this.value);
+    });
+
+    updateCartCount();
+
+    function handleSubscribe(event) {
+      event.preventDefault();
+      alert("Đăng ký thành công");
+      document.getElementById("emailInput").value = "";
+    }
+   
+  </script>
+</body>
+</html>
