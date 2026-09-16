@@ -7,9 +7,10 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-
     .view-section {
       display: none;
+      width: 100%;
+      clear: both;
     }
     .view-section.active {
       display: block;
@@ -147,91 +148,94 @@
       </div> 
     </div>
   </div>
-  
-  <div id="section-detail" class="view-section">
-    <div class="detail-search-bar">
-      <div class="search-box-container detail-search">
-        <input type="text" placeholder="Bạn muốn tìm sản phẩm gì ?">
-        <button type="submit">Tìm kiếm ngay</button>
+
+  <div id="section-detail" class="view-section" style="clear: both; width: 100%; display: none; padding-bottom: 50px;">
+    
+    <div class="detail-search-bar" style="text-align: center; padding: 20px 0; background-color: #f5f5f5;">
+      <div class="search-box-container detail-search" style="display: inline-block;">
+        <input type="text" placeholder="Bạn muốn tìm sản phẩm gì ?" style="padding: 8px 15px; width: 300px;">
+        <button type="submit" style="padding: 8px 15px; background: #333; color: #fff; border: none; cursor: pointer;">Tìm kiếm ngay</button>
       </div>
     </div>
 
-    <div class="breadcrumb-banner">
-      <a href="index.html">Trang chủ</a> &gt; <a href="#" onclick="showList(event)">Đầm</a> &gt; <span id="detail-bc-title">Tên sản phẩm</span>
+    <div class="breadcrumb-banner" style="background-color: #c2b16d; color: #fff; padding: 12px 20px; font-size: 14px;">
+      <a href="index.html" style="color: #fff; text-decoration: none;">Trang chủ</a> &gt; <a href="#" onclick="showList(event)" style="color: #fff; text-decoration: none;">Đầm</a> &gt; <span id="detail-bc-title">Tên sản phẩm</span>
     </div>
 
-    <div class="detail-container">
-      <div class="detail-thumbnails">
-        <img id="thumb1" src="hinhanh/dam1.jpg" class="active" alt="thumb1">
-        <img id="thumb2" src="hinhanh/dam1.jpg" alt="thumb2">
-        <img id="thumb3" src="hinhanh/dam1.jpg" alt="thumb3">
-        <img id="thumb4" src="hinhanh/dam1.jpg" alt="thumb4">
+    <div class="detail-container" style="display: flex; flex-wrap: wrap; max-width: 1200px; margin: 30px auto; padding: 0 15px; gap: 30px; box-sizing: border-box;">
+      
+      <div class="detail-thumbnails" style="display: flex; flex-direction: column; gap: 10px; width: 80px;">
+        <img id="thumb1" src="hinhanh/dam1.jpg" class="active" alt="thumb1" style="width: 100%; height: 100px; object-fit: cover; border: 1px solid #ccc; cursor: pointer;">
+        <img id="thumb2" src="hinhanh/dam1.jpg" alt="thumb2" style="width: 100%; height: 100px; object-fit: cover; border: 1px solid #ccc; cursor: pointer;">
+        <img id="thumb3" src="hinhanh/dam1.jpg" alt="thumb3" style="width: 100%; height: 100px; object-fit: cover; border: 1px solid #ccc; cursor: pointer;">
+        <img id="thumb4" src="hinhanh/dam1.jpg" alt="thumb4" style="width: 100%; height: 100px; object-fit: cover; border: 1px solid #ccc; cursor: pointer;">
       </div>
 
-      <div class="detail-main-img">
-        <img id="detail-product-img" src="hinhanh/dam1.jpg" alt="Ảnh chính">
+      <div class="detail-main-img" style="flex: 1; max-width: 450px;">
+        <img id="detail-product-img" src="hinhanh/dam1.jpg" alt="Ảnh chính" style="width: 100%; height: auto; display: block; border: 1px solid #eee;">
       </div>
 
-      <div class="detail-info">
-        <h1 class="detail-title" id="detail-product-title">Tên sản phẩm</h1>
-        <div class="detail-meta">
-          <span id="detail-product-sku">SKU: IF09.2808</span>
-          <span class="detail-stars" id="detail-product-stars">★★★★★ (0)</span>
+      <div class="detail-info" style="flex: 1; min-width: 300px;">
+        <h1 class="detail-title" id="detail-product-title" style="font-size: 24px; margin-bottom: 10px;">Tên sản phẩm</h1>
+        <div class="detail-meta" style="margin-bottom: 15px; color: #666; font-size: 14px;">
+          <span id="detail-product-sku">SKU: IF09.2808</span> | 
+          <span class="detail-stars" id="detail-product-stars" style="color: #f39c12;">★★★★★ (0)</span> | 
           <span id="detail-product-reviews">0 Nhận xét</span>
         </div>
 
-        <div class="detail-price" id="detail-product-price">0đ</div>
+        <div class="detail-price" id="detail-product-price" style="font-size: 26px; color: #d9534f; font-weight: bold; margin-bottom: 20px;">0đ</div>
 
-        <div class="promo-banner-box">
-          <p>Trả sau đến 12 tháng với <strong>Fundiin</strong> <i class="fa-solid fa-circle-question"></i></p>
+        <div class="promo-banner-box" style="background: #fff8e7; border: 1px dashed #e67e22; padding: 12px; margin-bottom: 20px; font-size: 13px;">
+          <p style="margin-bottom: 5px;">Trả sau đến 12 tháng với <strong>Fundiin</strong> <i class="fa-solid fa-circle-question"></i></p>
           <div class="promo-tag">
-            <span class="percent">%</span>
+            <span class="percent" style="background: #e67e22; color: #fff; padding: 2px 5px; border-radius: 3px; font-size: 11px;">%</span>
             <span>Giảm đến <strong>50K</strong> khi thanh toán qua Fundiin. <u>xem thêm</u></span>
           </div>
         </div>
 
-        <div class="option-row">
-          <label>Màu sắc:</label>
-          <div class="color-options">
-            <span class="color-dot color-pink active"></span>
-            <span class="color-dot color-blue"></span>
+        <div class="option-row" style="margin-bottom: 15px;">
+          <label style="font-weight: bold; margin-right: 10px;">Màu sắc:</label>
+          <div class="color-options" style="display: inline-block;">
+            <span class="color-dot color-pink active" style="display: inline-block; width: 20px; height: 20px; background: pink; border-radius: 50%; border: 2px solid #333; cursor: pointer; vertical-align: middle;"></span>
+            <span class="color-dot color-blue" style="display: inline-block; width: 20px; height: 20px; background: lightblue; border-radius: 50%; border: 1px solid #ccc; cursor: pointer; vertical-align: middle; margin-left: 5px;"></span>
           </div>
         </div>
 
-        <div class="option-row">
-          <label>Size:</label>
-          <div class="size-options">
-            <button>S</button>
-            <button class="active">M</button>
-            <button>L</button>
-            <button>XL</button>
+        <div class="option-row" style="margin-bottom: 15px;">
+          <label style="font-weight: bold; margin-right: 10px;">Size:</label>
+          <div class="size-options" style="display: inline-block;">
+            <button style="padding: 5px 12px; margin-right: 5px; border: 1px solid #ccc; background: #fff; cursor: pointer;">S</button>
+            <button class="active" style="padding: 5px 12px; margin-right: 5px; border: 1px solid #333; background: #333; color: #fff; cursor: pointer;">M</button>
+            <button style="padding: 5px 12px; margin-right: 5px; border: 1px solid #ccc; background: #fff; cursor: pointer;">L</button>
+            <button style="padding: 5px 12px; margin-right: 5px; border: 1px solid #ccc; background: #fff; cursor: pointer;">XL</button>
           </div>
         </div>
 
-        <div class="option-row">
-          <label>Số lượng:</label>
-          <div class="quantity-box">
-            <button>-</button>
-            <input type="text" value="1">
-            <button>+</button>
+        <div class="option-row" style="margin-bottom: 20px;">
+          <label style="font-weight: bold; margin-right: 10px;">Số lượng:</label>
+          <div class="quantity-box" style="display: inline-block;">
+            <button style="width: 30px; height: 30px; border: 1px solid #ccc; background: #f0f0f0; cursor: pointer;">-</button>
+            <input type="text" value="1" style="width: 40px; height: 26px; text-align: center; border: 1px solid #ccc;">
+            <button style="width: 30px; height: 30px; border: 1px solid #ccc; background: #f0f0f0; cursor: pointer;">+</button>
           </div>
         </div>
 
-        <div class="action-buttons">
-          <button class="btn-like"><i class="fa-regular fa-heart"></i></button>
-          <button class="btn-add-cart">THÊM VÀO GIỎ HÀNG</button>
-          <button class="btn-buy-now">MUA NGAY</button>
+        <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 25px;">
+          <button class="btn-like" style="padding: 12px 15px; border: 1px solid #ccc; background: #fff; cursor: pointer;"><i class="fa-regular fa-heart"></i></button>
+          <button class="btn-add-cart" style="flex: 1; padding: 12px; background: #fff; border: 1px solid #333; font-weight: bold; cursor: pointer;">THÊM VÀO GIỎ HÀNG</button>
+          <button class="btn-buy-now" style="flex: 1; padding: 12px; background: #333; color: #fff; border: none; font-weight: bold; cursor: pointer;">MUA NGAY</button>
         </div>
 
-        <div class="size-guide">
-          <span>Bảng size</span> <span>+</span>
+        <div class="size-guide" style="border-top: 1px solid #eee; padding-top: 15px; font-size: 14px; font-weight: bold; cursor: pointer;">
+          <span>Bảng size</span> <span style="float: right;">+</span>
         </div>
 
-        <div class="review-summary">
-          <h3>Đánh giá sản phẩm</h3>
-          <p id="detail-review-count">0 đánh giá</p>
+        <div class="review-summary" style="margin-top: 25px; border-top: 1px solid #eee; padding-top: 15px;">
+          <h3 style="font-size: 16px; margin-bottom: 5px;">Đánh giá sản phẩm</h3>
+          <p id="detail-review-count" style="color: #666; font-size: 14px;">0 đánh giá</p>
         </div>
       </div>
+
     </div>
   </div>
 
@@ -239,7 +243,7 @@
     <i class="fa-solid fa-user-astronaut"></i>
   </a>
 
-   <footer class="site-footer">
+  <footer class="site-footer" style="clear: both; position: relative; z-index: 10;">
     <div class="footer-container">
 
       <div class="footer-col">
@@ -303,11 +307,14 @@
     </div>
   </footer>
 
-
   <script>
     function showDetail(title, price, sku, imgSrc, stars, reviews, sold) {
       document.getElementById('section-list').classList.remove('active');
-      document.getElementById('section-detail').classList.add('active');
+      document.getElementById('section-list').style.display = 'none';
+      
+      const detailSec = document.getElementById('section-detail');
+      detailSec.classList.add('active');
+      detailSec.style.display = 'block';
       
       document.getElementById('detail-product-title').innerText = title;
       document.getElementById('detail-product-price').innerText = price;
@@ -329,8 +336,15 @@
 
     function showList(event) {
       if(event) event.preventDefault();
-      document.getElementById('section-detail').classList.remove('active');
-      document.getElementById('section-list').classList.add('active');
+      
+      const detailSec = document.getElementById('section-detail');
+      detailSec.classList.remove('active');
+      detailSec.style.display = 'none';
+      
+      const listSec = document.getElementById('section-list');
+      listSec.classList.add('active');
+      listSec.style.display = 'block';
+      
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   </script>
