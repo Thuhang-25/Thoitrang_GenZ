@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tài khoản - Thời Trang GenZ</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <header class="header-jm">
+    <div class="header-container">
+      <div class="logo-box">
+        <h1 class="logo-title">GenZ</h1>
+        <span class="logo-sub">Thoitrang GenZ</span>
+      </div>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html" class="sale-link"><span class="badge-sale">SALE</span> TRANG CHỦ <i class="fa-solid fa-angle-down"></i></a></li>
+          <li><a href="dam.html">ĐẦM</a></li>
+          <li><a href="ao.html">ÁO</a></li>
+          <li><a href="quan.html">QUẦN</a></li>
+          <li><a href="chanvay.html">CHÂN VÁY</a></li>
+          <li><a href="aokhoac.html">ÁO KHOÁC</a></li>
+          <li><a href="thatlung.html">THẮT LƯNG</a></li>
+          <li><a href="phukien.html">PHỤ KIỆN</a></li>
+          <li><a href="bst.html">BST MÙA ĐÔNG</a></li>
+        </ul>
+      </nav>
+      <div class="header-right">
+        <a href="#"><i class="fa-regular fa-heart"></i> <span>0</span></a>
+        <a href="#"><i class="fa-solid fa-bag-shopping"></i> <span>0</span></a>
+        <a href="taikhoan.html"><i class="fa-regular fa-user"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <div class="breadcrumb-banner">
+    <a href="index.html">Trang chủ</a> &gt; <span>Tài khoản</span>
+  </div>
+
+  <div class="auth-container">
+    <div class="auth-box">
+      <h2>Đăng nhập</h2>
+      <form onsubmit="return false;">
+        <div class="form-group">
+          <label>Nhập SĐT hoặc Địa chỉ email:</label>
+          <input type="text" placeholder="Email hoặc tên đăng nhập" required>
+        </div>
+        <div class="form-group">
+          <label>Mật Khẩu:</label>
+          <input type="password" placeholder="Password" required>
+        </div>
+        <div class="forgot-pass"><a href="#">Quên mật khẩu?</a></div>
+        <button type="submit" class="btn-submit">ĐĂNG NHẬP</button>
+        <button type="button" class="btn-social btn-google">
+          <img src="hinhanh/logo gmail.webp" alt="Google">
+          Đăng nhập gmail
+        </button>
+        <button type="button" class="btn-social btn-facebook">
+          <i class="fa-brands fa-facebook-f"></i> Đăng nhập facebook
+        </button>
+        <p class="promo-text"><span>10% off cho đơn hàng đầu tiên</span> xác nhận và kiếm thêm 100 điểm</p>
+      </form>
+    </div>
+
+    <div class="auth-box">
+      <h2>Đăng ký</h2>
+      <form onsubmit="return false;">
+        <div class="form-group">
+          <label>Số điện thoại:</label>
+          <input type="tel" placeholder="Điện thoại" required>
+        </div>
+        <div class="form-group">
+          <label>Địa Chỉ Email:</label>
+          <input type="email" placeholder="Email hoặc tên đăng nhập" required>
+        </div>
+        <div class="form-group">
+          <label>Họ và tên:</label>
+          <input type="text" placeholder="Họ và tên của bạn" required>
+        </div>
+        <div class="form-group">
+          <label>Mật Khẩu:</label>
+          <input type="password" placeholder="Password" required>
+        </div>
+        <button type="submit" class="btn-submit btn-register">TẠO TÀI KHOẢN</button>
+        <p class="sub-promo-text">Đăng ký Nhận phiếu <span>giảm giá 10%</span> off và Hơn thế nữa</p>
+      </form>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>THỜI TRANG GENZ</h4>
+        <ul>
+          <li><a href="#">Giới thiệu</a></li>
+          <li><a href="#">Tin tức</a></li>
+          <li><a href="#">Hệ thống cửa hàng</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>LIÊN KẾT VỚI CHÚNG TÔI</h4>
+        <ul class="social-links">
+          <li><a href="#"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+          <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>CHĂM SÓC KHÁCH HÀNG</h4>
+        <ul>
+          <li><a href="#">Chính sách vận chuyển</a></li>
+          <li><a href="#">Chính sách bảo mật</a></li>
+        </ul>
+      </div>
+      <div class="footer-col newsletter-col">
+        <h4>ĐĂNG KÝ MAIL NHẬN ƯU ĐÃI</h4>
+        <form onsubmit="handleSubscribe(event)">
+          <div class="input-group">
+            <input type="email" id="emailInput2" placeholder="Nhập email của bạn" required>
+            <button type="submit">GỬI NGAY</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="company-info"><p>©2009-2026 Thoitrang GenZ All Rights Reserved</p></div>
+    </div>
+  </footer>
+
+  <script>
+    function handleSubscribe(event) {
+      event.preventDefault();
+      alert("Đăng ký thành công");
+      document.getElementById("emailInput2").value = "";
+    }
+  </script>
+
+</body>
+</html>
