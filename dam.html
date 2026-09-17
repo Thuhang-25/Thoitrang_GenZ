@@ -18,7 +18,6 @@
   </style>
 </head>
 <body>
-
   <header class="header-jm">
     <div class="header-container">
       <a href="index.html" class="logo-box">
@@ -46,7 +45,6 @@
     </div>
   </header>
 
-  <!-- DANH SÁCH SẢN PHẨM -->
   <div id="section-list" class="view-section active">
     <div class="breadcrumb-banner">
       <a href="index.html">Trang chủ</a> &gt; <span>Đầm</span>
@@ -166,7 +164,6 @@
     <i class="fa-solid fa-user-astronaut"></i>
   </a>
 
-  <!-- FOOTER SECTION -->
   <footer class="site-footer" style="clear: both; position: relative; z-index: 10;">
     <div class="footer-container">
 
@@ -232,7 +229,6 @@
   </footer>
 
   <script>
-    // DANH SÁCH DỮ LIỆU SẢN PHẨM
     let productsData = [
       { id: 1, title: 'Đầm voan tơ hồng cổ V xẻ sâu dáng xòe', price: 785000, priceText: '785,000đ', sku: 'IF09.2808', img: 'hinhanh/dam1.jpg', stars: '★★★★★ (18)', reviews: '(18 nhận xét)', sold: '(287 đã bán)' },
       { id: 2, title: 'Đầm cúp ngực hồng phối viền lông vũ', price: 895000, priceText: '895,000đ', sku: 'IF09.2809', img: 'hinhanh/dam2.jpg', stars: '★★★★☆ (42)', reviews: '(42 nhận xét)', sold: '(301 đã bán)' },
@@ -245,7 +241,6 @@
 
     let selectedSizeValue = 'M';
 
-    // HIỂN THỊ SẢN PHẨM RA GIAO DIỆN
     function renderProducts(items) {
       const grid = document.getElementById('product-grid');
       grid.innerHTML = '';
@@ -329,8 +324,6 @@
       if (currentQty < 1) currentQty = 1;
       qtyInput.value = currentQty;
     }
-
-    // CHỌN SIZE S, M, L, XL
     function selectSize(btnElement) {
       const sizeButtons = document.querySelectorAll('.btn-size');
       sizeButtons.forEach(btn => {
