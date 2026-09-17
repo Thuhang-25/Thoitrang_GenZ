@@ -57,8 +57,8 @@ Thanh menu giúp người dùng nhanh chóng truy cập các danh mục:
 
 **Trang chủ → Đầm → Áo → Quần → Chân váy → Áo khoác → Thắt lưng → Phụ kiện → Bộ sưu tập mùa đông → Trang mua hàng (Bấm vào sản phẩm) → Trang tài khoản (Logo: góc phía bên trên phải)**
 
-### Footer:
-Chân trang cung cấp các thông tin:
+### Chân trang:
+Chân trang cung cấp đầy đủ các thông tin của website:
 - Giới thiệu về cửa hàng.
 - Thông tin liên hệ.
 - Liên kết mạng xã hội.
