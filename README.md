@@ -1,6 +1,6 @@
 # THỜI TRANG GENZ
 ## 1. Giới thiệu Trang web Thời Trang GenZ:
-**Thời Trang GenZ** là website bán hàng thời trang trực tuyến được xây dựng trong môn học **Xây dựng ứng dụng web** tại Đại Học Phenikaa. Website được thiết kế nhằm mô phỏng một cửa hàng thời trang trực tuyến giúp người dùng dễ dàng xem, tìm kiếm và lựa chọn các sản phẩm thời trang phù hợp với nhu cầu.
+**Thời Trang GenZ** là website bán hàng thời trang trực tuyến được xây dựng trong môn học **Xây dựng ứng dụng web** tại **Đại Học Phenikaa**. Website được thiết kế nhằm mô phỏng một cửa hàng thời trang trực tuyến giúp người dùng dễ dàng xem, tìm kiếm và lựa chọn các sản phẩm thời trang phù hợp với nhu cầu.
 
 ## 2. Mục tiêu của website:
 Website được xây dựng với các mục tiêu:
