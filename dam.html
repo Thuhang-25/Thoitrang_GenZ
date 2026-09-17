@@ -35,7 +35,7 @@
           <li><a href="aokhoac.html">ÁO KHOÁC</a></li>
           <li><a href="thatlung.html">THẮT LƯNG</a></li>
           <li><a href="phukien.html">PHỤ KIỆN</a></li>
-          <li><a href="bstmuadong.html">BST MÙA ĐÔNG</a></li>
+          <li><a href="bst.html">BST MÙA ĐÔNG</a></li>
         </ul>
       </nav>
       <div class="header-right">
@@ -56,7 +56,6 @@
       <div class="product-filter-bar">
         <div class="filter-left">
           <span>Xem theo</span>
-          <!-- BỔ SUNG SỰ KIỆN ONCHANGE ĐỂ SẮP XẾP -->
           <select id="sort-select" onchange="sortProducts()">
             <option value="newest">Mới nhất</option>
             <option value="price-asc">Giá thấp đến cao</option>
@@ -68,14 +67,11 @@
         </div>
       </div>
 
-      <!-- BỔ SUNG ID DÙNG ĐỂ RENDER CHỨC NĂNG SẮP XẾP -->
       <div class="product-grid" id="product-grid">
-        <!-- JS sẽ tự động đổ dữ liệu sản phẩm vào đây -->
       </div> 
     </div>
   </div>
   
-  <!-- CHI TIẾT SẢN PHẨM -->
   <div id="section-detail" class="view-section" style="clear: both; width: 100%; display: none; padding-bottom: 50px;">
     
     <div class="detail-search-bar" style="text-align: center; padding: 20px 0; background-color: #f5f5f5;">
@@ -270,7 +266,6 @@
       });
     }
 
-    // TÍNH NĂNG SẮP XẾP SẢN PHẨM
     function sortProducts() {
       const type = document.getElementById('sort-select').value;
       let sortedList = [...productsData];
@@ -286,7 +281,6 @@
       renderProducts(sortedList);
     }
 
-    // CHUYỂN SANG TRANG CHI TIẾT
     function showDetail(title, price, sku, imgSrc, stars, reviews, sold) {
       document.getElementById('section-list').classList.remove('active');
       document.getElementById('section-list').style.display = 'none';
@@ -314,7 +308,6 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // QUAY LẠI DANH SÁCH
     function showList(event) {
       if(event) event.preventDefault();
       
@@ -329,7 +322,6 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // TĂNG GIẢM SỐ LƯỢNG
     function changeQuantity(amount) {
       const qtyInput = document.getElementById('quantity-input');
       let currentQty = parseInt(qtyInput.value) || 1;
@@ -355,7 +347,6 @@
       selectedSizeValue = btnElement.innerText;
     }
 
-    // THÊM VÀO GIỎ HÀNG
     function addToCart() {
       const qty = document.getElementById('quantity-input').value;
       const title = document.getElementById('detail-product-title').innerText;
@@ -368,14 +359,11 @@
       alert('Đã thêm thành công ' + qty + ' sản phẩm (' + title + ' - Size ' + selectedSizeValue + ') vào giỏ hàng!');
     }
 
-    // MUA NGAY
     function buyNow() {
       const qty = document.getElementById('quantity-input').value;
       const title = document.getElementById('detail-product-title').innerText;
       alert('Mua hàng thành công!\nSản phẩm: ' + title + '\nSize: ' + selectedSizeValue + '\nSố lượng: ' + qty);
     }
-
-    // KHỞI TẠO TẢI SẢN PHẨM LẦN ĐẦU
     window.onload = function() {
       renderProducts(productsData);
     };
