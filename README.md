@@ -1,5 +1,5 @@
 # THỜI TRANG GENZ
-## 1. Giới thiệu:
+## 1. Giới thiệu Trang web Thời Trang GenZ:
 **Thời Trang GenZ** là website bán hàng thời trang trực tuyến được xây dựng trong môn học **Xây dựng ứng dụng web** tại Đại Học Phenikaa. Website được thiết kế nhằm mô phỏng một cửa hàng thời trang trực tuyến giúp người dùng dễ dàng xem, tìm kiếm và lựa chọn các sản phẩm thời trang phù hợp với nhu cầu.
 
 ## 2. Mục tiêu của website:
@@ -62,12 +62,12 @@ Chân trang cung cấp các thông tin:
 Website được xây dựng chủ yếu bằng:
 - **HTML5**: Xây dựng cấu trúc và nội dung các trang web.
 - **CSS3**: Thiết kế giao diện, bố cục, màu sắc và định dạng website.
+- **Visual Studio Code**: Sử dụng để viết, chỉnh sửa và quản lý mã nguồn của website.
 - **GitHub**: Quản lý mã nguồn và lưu trữ dự án.
 - **GitHub Pages**: Triển khai website trực tuyến.
 
 ## 6. Cấu trúc dự án:
 Một số thành phần chính của dự án:
-```text
 Thoitrang_GenZ/
 │
 ├── anhao/              # Hình ảnh sản phẩm áo
