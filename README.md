@@ -26,7 +26,7 @@ Website cung cấp nhiều danh mục thời trang, bao gồm:
 - Bộ sưu tập mùa đông
 
 ## 4. Các chức năng chính:
-### Trang chủ
+### Trang chủ:
 - Hiển thị banner và hình ảnh giới thiệu cửa hàng.
 - Hiển thị các sản phẩm bán chạy.
 - Điều hướng đến các danh mục sản phẩm.
