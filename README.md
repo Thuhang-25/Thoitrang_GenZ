@@ -77,7 +77,10 @@ Website được xây dựng chủ yếu bằng:
 - **GitHub**: Quản lý mã nguồn và lưu trữ dự án.
 - **GitHub Pages**: Triển khai website trực tuyến.
 
-## 6. Nhiệm vụ hoàn thành của thành viên
+## 6. Nhiệm vụ hoàn thành của từng thành viên:
+Nhóm: **3**
+Học phần: **Xây dựng ứng dụng web (COUR06.LT5)**
+Giảng viên: **Hồ Lê Viết Nin**
 
 | STT | Thành viên | Mã sinh viên | Nhiệm vụ |
 |---|---|---|---|
