@@ -114,7 +114,7 @@ Thoitrang_GenZ/
 ├── aokhoac.html        # Trang áo khoác
 ├── thatlung.html       # Trang thắt lưng
 ├── phukien.html        # Trang phụ kiện
-├── bst.html             # Bộ sưu tập mùa đông
+├── bst.html            # Bộ sưu tập mùa đông
 ├── taikhoan.html       # Trang tài khoản
 │
-├── README.md          # Tài liệu mô tả dự án
+├── README.md           # Tài liệu mô tả dự án
