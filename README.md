@@ -68,6 +68,7 @@ Website được xây dựng chủ yếu bằng:
 
 ## 6. Cấu trúc dự án:
 Một số thành phần chính của dự án:
+```text
 Thoitrang_GenZ/
 │
 ├── anhao/              # Hình ảnh sản phẩm áo
