@@ -55,7 +55,7 @@ Website cung cấp nhiều danh mục thời trang, bao gồm:
 ### Điều hướng:
 Thanh menu giúp người dùng nhanh chóng truy cập các danh mục:
 
-**Trang chủ → Đầm → Áo → Quần → Chân váy → Áo khoác → Thắt lưng → Phụ kiện → Bộ sưu tập mùa đông → Trang tài khoản (Logo: góc phía bên trên phải)**
+**Trang chủ → Đầm → Áo → Quần → Chân váy → Áo khoác → Thắt lưng → Phụ kiện → Bộ sưu tập mùa đông → Trang mua hàng (Bấm vào sản phẩm) → Trang tài khoản (Logo: góc phía bên trên phải)**
 
 ### Footer:
 Chân trang cung cấp các thông tin:
