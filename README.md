@@ -14,6 +14,8 @@ Website được xây dựng với các mục tiêu:
 ## 3. Các danh mục sản phẩm:
 Website cung cấp nhiều danh mục thời trang, bao gồm:
 - Trang chủ
+- Trang tài khoản
+- Trang mua hàng
 - Đầm
 - Áo
 - Quần
@@ -40,6 +42,15 @@ Website cung cấp nhiều danh mục thời trang, bao gồm:
 - Cung cấp biểu mẫu đăng nhập và đăng ký tài khoản.
 - Cho phép người dùng nhập thông tin để đăng nhập hoặc tạo tài khoản.
 - Hỗ trợ người dùng truy cập và sử dụng các chức năng liên quan đến tài khoản.
+
+### Trang mua hàng:
+- Hiển thị hình ảnh và thông tin chi tiết của sản phẩm.
+- Hiển thị tên sản phẩm, mã sản phẩm, giá bán và đánh giá của khách hàng.
+- Cho phép người dùng lựa chọn màu sắc và kích thước sản phẩm.
+- Cho phép người dùng điều chỉnh số lượng sản phẩm cần mua.
+- Cung cấp chức năng thêm sản phẩm vào giỏ hàng.
+- Cung cấp chức năng mua sản phẩm ngay.
+- Cho phép người dùng thêm sản phẩm vào danh sách yêu thích.
 
 ### Điều hướng:
 Thanh menu giúp người dùng nhanh chóng truy cập các danh mục:
