@@ -70,14 +70,14 @@ Website được xây dựng chủ yếu bằng:
 
 | STT | Thành viên | Mã sinh viên | Nhiệm vụ |
 |---|---|---|---|
-| 1 | Kiều Thu Hằng | 241xxxxx | Trang chủ (index.html), Giao diện website (style.css), Trang đầm (dam.html), Hình ảnh đầm (thư mục hinhanh), Thư mục VSCode. |
+| 1 | Kiều Thu Hằng | 24103614 | Trang chủ (index.html), Giao diện website (style.css), Trang đầm (dam.html), Hình ảnh đầm (thư mục hinhanh), Thư mục VSCode. |
 | 2 | Nguyễn Bá Hải | 24103250 | README (README.md), Trang tài khoản (taikhoan.html), Trang áo khoác (aokhoac.html), Hình ảnh áo khoác (Thư mục anhAokhoac). |
 | 3 | Nguyễn Đức Hải | 24108389 | Trang phụ kiện (phukien.html), Hình ảnh được trích dẫn theo liên kết. |
 | 4 | Nguyễn Xuân Đạt | 24103921 | Trang chân váy (chanvay.html), Hình ảnh chân váy (Thư mục anhchanvay). |
 | 5 | Nguyễn Hùng | 24103732 | Trang quần (quan.html), Hình ảnh quần (Thư mục anhQuan). |
 | 6 | Đàm Tấn Đạt | 24103750 | Trang áo (ao.html), Hình ảnh áo (Thư mục anhao). |
 | 7 | Phạm Tiến Đạt | 24108206 | Trang bộ sưu tập mùa đông (bst.html), Hình ảnh bộ sưu tập mùa đông (Thư mục hinhanh). |
-| 8 | Trịnh Quang Đăng | 24103957 | Trang thắt lưng (thatlung.html), Hình ảnh thắt lưng (Thư mục anhthatlung). |
+| 8 | Trịnh Quang Đăng | 24103947 | Trang thắt lưng (thatlung.html), Hình ảnh thắt lưng (Thư mục anhthatlung). |
 
 ## 7. Cấu trúc dự án:
 Một số thành phần chính của dự án:
