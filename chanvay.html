@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Thời Trang GenZ - Chân Váy</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+.view-section{display:none}.view-section.active{display:block}
+.selected-color{display:inline-block;min-width:45px;font-weight:500}
+.btn-like i.liked,.like-icon.liked{color:red!important;font-weight:900}
+</style>
+</head>
+
+<body>
+
+<header class="header-jm">
+<div class="header-container">
+<li><a href="index.html" class="sale-link"><span class="badge-sale">SALE</span> TRANG CHỦ <i class="fa-solid fa-angle-down"></i></a></li>
+<li><a href="dam.html">ĐẦM</a></li>
+<li><a href="ao.html">ÁO</a></li>
+<li><a href="quan.html">QUẦN</a></li>
+<li><a href="chanvay.html" style="color: #b8860b;" onclick="showList(event)">CHÂN VÁY</a></li>
+<li><a href="aokhoac.html">ÁO KHOÁC</a></li>
+<li><a href="thatlung.html">THẮT LƯNG</a></li>
+<li><a href="phukien.html">PHỤ KIỆN</a></li>
+<li><a href="bst.html">BST MÙA ĐÔNG</a></li>
+</ul>
+</nav>
+<div class="header-right">
+<a href="#"><i class="fa-regular fa-heart"></i> <span>0</span></a>
+<a href="#" onclick="openCart(event)"><i class="fa-solid fa-bag-shopping"></i> <span id="cart-count">0</span></a>
+<a href="taikhoan.html"><i class="fa-regular fa-user"></i></a>
+</div>
+</div>
+</header>
+
+<div id="section-list" class="view-section active">
+<div class="breadcrumb-banner"><a href="index.html">Trang chủ</a> &gt; <span>Chân váy</span></div>
+
+<div class="product-page-container">
+<div class="product-filter-bar">
+<div class="filter-left">Xem theo
+<select id="sortProducts">
+<option value="newest">Mới nhất</option>
+<option value="price-asc">Giá thấp đến cao</option>
+<option value="price-desc">Giá cao đến thấp</option>
+</select></div>
+<div class="filter-right">Tổng số sản phẩm: <strong>7</strong></div>
+</div>
+
+<div class="product-grid" id="product-grid">
+
+<div class="product-card" data-price="399000" onclick="showDetail('Chân Váy Chữ A Nữ Basic','399,000đ','IF09.3000','anhchanvay/hinhanh1.jpg','★★★★★ (235)','129 nhận xét','375 đã bán','Đen')">
+<div class="product-img-box"><img src="anhchanvay/hinhanh1.jpg" alt="Chân Váy Chữ A Nữ Basic"></div>
+<div class="product-info"><h3>Chân Váy Chữ A Nữ Basic</h3><div class="price-row"><span class="price">399,000đ</span><i class="fa-regular fa-heart like-icon"></i></div><div class="meta-row"><span class="rating">★★★★★ (235)</span><span class="sold">(375 đã bán)</span></div></div>
+</div>
+
+<div class="product-card" data-price="459000" onclick="showDetail('Chân Váy Tennis Nữ Xếp Ly','459,000đ','IF09.3001','anhchanvay/hinhanh2.jpg','★★★★☆ (122)','58 nhận xét','301 đã bán','Trắng')">
+<div class="product-img-box"><img src="anhchanvay/hinhanh2.png" alt="Chân Váy Tennis Nữ Xếp Ly"></div>
+<div class="product-info"><h3>Chân Váy Tennis Nữ Xếp Ly</h3><div class="price-row"><span class="price">459,000đ</span><i class="fa-regular fa-heart like-icon"></i></div><div class="meta-row"><span class="rating">★★★★☆ (122)</span><span class="sold">(301 đã bán)</span></div></div>
+</div>
+
+<div class="product-card" data-price="499000" onclick="showDetail('Chân Váy Dài Nữ Thanh Lịch','499,000đ','IF09.3002','anhchanvay/hinhanh3.jpg','★★★★★ (217)','57 nhận xét','320 đã bán','Nâu')">
+<div class="product-img-box"><img src="anhchanvay/hinhanh3.jpg" alt="Chân Váy Dài Nữ Thanh Lịch"></div>
+<div class="product-info"><h3>Chân Váy Dài Nữ Thanh Lịch</h3><div class="price-row"><span class="price">499,000đ</span><i class="fa-regular fa-heart like-icon"></i></div><div class="meta-row"><span class="rating">★★★★★ (217)</span><span class="sold">(320 đã bán)</span></div></div>
+</div>
+
+<div class="product-card" data-price="529000" onclick="showDetail('Chân Váy Jeans Nữ Cá Tính','529,000đ','IF09.3003','anhchanvay/hinhanh4.png','★★★★★ (137)','87 nhận xét','245 đã bán','Xanh')">
+<div class="product-img-box"><img src="anhchanvay/hinhanh4.png" alt="Chân Váy Jeans Nữ Cá Tính"></div>
+<div class="product-info"><h3>Chân Váy Jeans Nữ Cá Tính</h3><div class="price-row"><span class="price">529,000đ</span><i class="fa-regular fa-heart like-icon"></i></div><div class="meta-row"><span class="rating">★★★★★ (137)</span><span class="sold">(245 đã bán)</span></div></div>
+</div>
+
+<div class="product-card" data-price="599000" onclick="showDetail('Chân Váy Chữ A Nữ Cao Cấp','599,000đ','IF09.3004','anhchanvay/hinhanh5.jpg','★★★★☆ (156)','127 nhận xét','318 đã bán','Be')">
+<div class="product-img-box"><img src="anhchanvay/hinhanh5.jpg" alt="Chân Váy Chữ A Nữ Cao Cấp"></div>
+<div class="product-info"><h3>Chân Váy Chữ A Nữ Cao Cấp</h3><div class="price-row"><span class="price">599,000đ</span><i class="fa-regular fa-heart like-icon"></i></div><div class="meta-row"><span class="rating">★★★★☆ (156)</span><span class="sold">(318 đã bán)</span></div></div>
+</div>
+
+<div class="product-card" data-price="629000" onclick="showDetail('Chân Váy Maxi Nữ Vintage','629,000đ','IF09.3005','anhchanvay/hinhanh6.jpg','★★★★☆ (564)','364 nhận xét','1.2k đã bán','Đen')">
+<div class="product-img-box"><img src="anhchanvay/hinhanh6.jpg" alt="Chân Váy Maxi Nữ Vintage"></div>
+<div class="product-info"><h3>Chân Váy Maxi Nữ Vintage</h3><div class="price-row"><span class="price">629,000đ</span><i class="fa-regular fa-heart like-icon"></i></div><div class="meta-row"><span class="rating">★★★★☆ (564)</span><span class="sold">(1.2k đã bán)</span></div></div>
+</div>
+
+<div class="product-card" data-price="679000" onclick="showDetail('Chân Váy Xếp Ly Nữ Premium','679,000đ','IF09.3006','anhchanvay/hinhanh7.jpg','★★★★★ (246)','178 nhận xét','355 đã bán','Hồng')">
+<div class="product-img-box"><img src="anhchanvay/hinhanh7.jpg" alt="Chân Váy Xếp Ly Nữ Premium"></div>
+<div class="product-info"><h3>Chân Váy Xếp Ly Nữ Premium</h3><div class="price-row"><span class="price">679,000đ</span><i class="fa-regular fa-heart like-icon"></i></div><div class="meta-row"><span class="rating">★★★★★ (246)</span><span class="sold">(355 đã bán)</span></div></div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div id="section-detail" class="view-section">
+<div class="breadcrumb-banner"><a href="index.html">Trang chủ</a> &gt; <a href="#" onclick="showList(event)">Chân váy</a> &gt; <span id="detail-bc-title">Tên sản phẩm</span></div>
+
+<div class="detail-container">
+<div class="detail-thumbnails">
+<img id="thumb1" src="anhchanvay/hinhanh1.jpg" class="active">
+<img id="thumb2" src="anhchanvay/hinhanh2.png">
+<img id="thumb3" src="anhchanvay/hinhanh3.jpg">
+<img id="thumb4" src="anhchanvay/hinhanh4.png">
+</div>
+
+<div class="detail-main-img"><img id="detail-product-img" src="anhchanvay/hinhanh1.jpg" alt="Ảnh chính"></div>
+
+<div class="detail-info">
+<h1 class="detail-title" id="detail-product-title">Tên sản phẩm</h1>
+<div class="detail-meta">
+<span id="detail-product-sku">SKU: IF09.3000</span>
+<span id="detail-product-stars">★★★★★ (0)</span>
+<span id="detail-product-reviews">0 Nhận xét</span>
+</div>
+<div class="detail-price" id="detail-product-price">0đ</div>
+
+<div class="promo-banner-box">
+<p>Trả sau đến 12 tháng với <strong>Fundiin</strong></p>
+<div class="promo-tag">Giảm đến <strong>50K</strong> khi thanh toán qua Fundiin.</div>
+</div>
+
+<div class="option-row"><label>Màu sắc:</label><span id="detail-product-color" class="selected-color">Đen</span></div>
+
+<div class="option-row"><label>Size:</label>
+<div class="size-options"><button>S</button><button class="active">M</button><button>L</button><button>XL</button></div>
+</div>
+
+<div class="option-row"><label>Số lượng:</label>
+<div class="quantity-box"><button>-</button><input type="text" value="1"><button>+</button></div>
+</div>
+
+<div class="action-buttons">
+<button class="btn-like"><i class="fa-regular fa-heart"></i></button>
+<button class="btn-add-cart">THÊM VÀO GIỎ HÀNG</button>
+<button class="btn-buy-now">MUA NGAY</button>
+</div>
+
+<div class="review-summary"><h3>Đánh giá sản phẩm</h3><p id="detail-review-count">0 đánh giá</p></div>
+</div>
+</div>
+</div>
+
+<a href="taikhoan.html" class="floating-chat-btn"><i class="fa-solid fa-user-astronaut"></i></a>
+
+<footer class="site-footer">
+    <div class="footer-container">
+
+      <div class="footer-col">
+        <h4>THỜI TRANG GENZ</h4>
+        <ul>
+          <li><a href="#">Giới thiệu</a></li>
+          <li><a href="#">Tin tức</a></li>
+          <li><a href="#">Hệ thống cửa hàng</a></li>
+          <li><a href="#">Thông tin tuyển dụng</a></li>
+          <li><a href="#">Liên hệ hợp tác kinh doanh</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>LIÊN KẾT VỚI CHÚNG TÔI</h4>
+        <ul class="social-links">
+          <li><a href="#"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+          <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+          <li><a href="#"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
+          <li><a href="#"><i class="fa-solid fa-envelope"></i> Email: ThoitrangGenZ@gmail.com.vn</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>CHĂM SÓC KHÁCH HÀNG</h4>
+        <ul>
+          <li><a href="#">Chính sách vận chuyển</a></li>
+          <li><a href="#">Chính sách tích điểm</a></li>
+          <li><a href="#">Chính sách bảo mật</a></li>
+          <li><a href="#">Chế độ bảo hành trọn đời</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col newsletter-col">
+        <h4>ĐĂNG KÝ MAIL NHẬN ƯU ĐÃI TỪ Thoitrang GenZ</h4>
+        <form id="subscribeForm" onsubmit="handleSubscribe(event)">
+          <div class="input-group">
+            <input type="email" id="emailInput" placeholder="Nhập email của bạn" required>
+            <button type="submit">GỬI NGAY</button>
+          </div>
+        </form>
+        <p class="terms-text">
+          Bằng cách nhấp vào nút <a href="#">ĐĂNG KÝ</a>, bạn đồng ý với Chính sách bảo mật và cookie của chúng tôi.
+          Vui lòng <a href="taikhoan.html">ĐĂNG NHẬP</a> khi bạn đã có tài khoản.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="bottom-container">
+        <p>©2009-2026 Thoitrang GenZ All Rights Reserved</p>
+        <div class="payment-info">
+          <span>Chúng tôi nhận thanh toán qua:</span>
+          <img src="hinhanh/logo vnpay.png" alt="VNPAY" class="payment-logo">
+        </div>
+      </div>
+
+      <div class="company-info">
+        <p><strong>CÔNG TY CỔ PHẦN THƯƠNG MẠI VIỆT NAM</strong></p>
+        <p>Trụ sở chính: Đại học Phenikaa</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+let selectedSize='M',selectedColor='Đen',currentProduct=null;
+const $=id=>document.getElementById(id);
+
+function showDetail(title,price,sku,img,stars,reviews,sold,color){
+$('section-list').classList.remove('active');
+$('section-detail').classList.add('active');
+currentProduct={title,price,sku,img,color};
+selectedColor=color;selectedSize='M';
+$('detail-product-title').textContent=title;
+$('detail-product-price').textContent=price;
+$('detail-product-sku').textContent='SKU: '+sku;
+$('detail-product-stars').textContent=stars;
+$('detail-product-reviews').textContent=reviews;
+$('detail-review-count').textContent=reviews+' / '+sold;
+$('detail-bc-title').textContent=title;
+$('detail-product-color').textContent=color;
+$('detail-product-img').src=img;
+document.querySelectorAll('.detail-thumbnails img').forEach(x=>x.src=img);
+document.querySelectorAll('.size-options button').forEach(x=>x.classList.toggle('active',x.textContent.trim()==='M'));
+document.querySelector('.quantity-box input').value=1;
+}
+
+function showList(e){
+if(e)e.preventDefault();
+$('section-detail').classList.remove('active');
+$('section-list').classList.add('active');
+}
+
+document.querySelectorAll('.size-options button').forEach(btn=>btn.onclick=e=>{
+e.stopPropagation();
+document.querySelectorAll('.size-options button').forEach(x=>x.classList.remove('active'));
+btn.classList.add('active');selectedSize=btn.textContent.trim();
+});
+
+const quantityInput=document.querySelector('.quantity-box input');
+document.querySelectorAll('.quantity-box button')[0].onclick=e=>{
+e.stopPropagation();quantityInput.value=Math.max(1,(+quantityInput.value||1)-1);
+};
+document.querySelectorAll('.quantity-box button')[1].onclick=e=>{
+e.stopPropagation();quantityInput.value=(+quantityInput.value||1)+1;
+};
+
+document.querySelector('.btn-like').onclick=e=>{
+e.stopPropagation();e.currentTarget.querySelector('i').classList.toggle('liked');
+};
+
+document.querySelectorAll('.like-icon').forEach(x=>x.onclick=e=>{
+e.stopPropagation();x.classList.toggle('liked');
+});
+
+document.querySelector('.btn-add-cart').onclick=e=>{
+e.stopPropagation();
+if(!currentProduct)return;
+let cart=JSON.parse(localStorage.getItem('cart'))||[];
+cart.push({...currentProduct,size:selectedSize,color:selectedColor,quantity:+quantityInput.value||1});
+localStorage.setItem('cart',JSON.stringify(cart));updateCartCount();alert('Đã thêm vào giỏ');
+};
+
+document.querySelector('.btn-buy-now').onclick=e=>{
+e.stopPropagation();alert('Đã mua sản phẩm');
+};
+
+function updateCartCount(){
+let cart=JSON.parse(localStorage.getItem('cart'))||[];
+$('cart-count').textContent=cart.reduce((s,x)=>s+(+x.quantity||1),0);
+}
+
+document.querySelectorAll('.detail-thumbnails img').forEach(x=>x.onclick=()=>{
+document.querySelectorAll('.detail-thumbnails img').forEach(i=>i.classList.remove('active'));
+x.classList.add('active');$('detail-product-img').src=x.src;
+});
+
+function sortProducts(type){
+let grid=$('product-grid'),items=[...grid.children];
+items.sort((a,b)=>type==='price-asc'
+?+a.dataset.price-+b.dataset.price
+:type==='price-desc'?+b.dataset.price-+a.dataset.price:0);
+items.forEach(x=>grid.appendChild(x));
+}
+$('sortProducts').onchange=e=>sortProducts(e.target.value);
+updateCartCount();
+</script>
+</body>
+</html>
